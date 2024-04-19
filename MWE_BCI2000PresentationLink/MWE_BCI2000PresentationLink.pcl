@@ -1,0 +1,83 @@
+#-- pcl file --#
+
+string returnVal;
+
+######################## START BCI2000 ########################
+
+# Create a BCI2000 controller object
+bci2000::controller bci = new bci2000::controller();
+
+# Add parameters
+#bci.execute("Add Parameter Application:TestParameterField string TestParameter= FirstNewParameter % % %",returnVal);
+
+
+# Set log level to 0
+bci.execute("set LogLevel 0", returnVal);
+
+# Start up modules
+array <string> modules[3] = { "SignalGenerator --LogKeyboard=1", "DummySignalProcessing", "DummyApplication" };
+bci.startup_modules(modules);
+
+# Synchronize BCI2000 subject id with Presentation's
+bci.set_subject( logfile.subject() );
+bci.set_session( "001" );
+
+# Load parameter file
+bci.load_parameters_remote( "../parms/fragments/amplifiers/SignalGenerator.prm" );
+
+# Set parameters
+bci.set_parameter( "SamplingRate", "1001" );
+bci.set_parameter( "SampleBlockSize", "100" );
+
+# Inspect events
+# Events are initialized in Settings>Port>Data Port Properties
+bci.execute("visualize watch Square", returnVal);
+bci.execute("visualize watch KeyDown", returnVal);
+bci.execute("visualize watch KeyUp", returnVal);
+
+# Get parameter value
+string SubjectName = bci.get_parameter( "SubjectName" );
+
+# Need to set configuration and start BCI2000 from pcl file
+bci.set_config();
+bci.start();
+
+###############################################################
+
+
+########################## Main Task ##########################
+wait_interval(1000);
+
+loop int i = 0 until i > 10
+begin
+	if (i%2 == 0) then
+		# Set BCI2000 event "Square" value to 0 for black
+		bci.execute( "Set event Square 0", returnVal );
+		Square.set_color(0,0,0);
+		main.present();
+	else
+		# Set BCI2000 event "Square" value to 1 for white
+		bci.execute( "Set event Square 1", returnVal );
+		Square.set_color(255,255,255);
+		main.present();
+	end;
+	
+	# Get event value
+	int KeyDown = bci.get_event_variable( "KeyDown" );
+	
+	# Get state value
+	int SourceTime = bci.get_state_variable( "SourceTime" );
+
+   i = i + 1;
+end;
+
+#wait_interval(3000);
+
+###############################################################
+
+
+########################## STOP BCI2000 #######################
+
+bci.stop();
+
+###############################################################

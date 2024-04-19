@@ -1,0 +1,1 @@
+python3.9 -i "MWEBCI2000Remote_mac.py"
