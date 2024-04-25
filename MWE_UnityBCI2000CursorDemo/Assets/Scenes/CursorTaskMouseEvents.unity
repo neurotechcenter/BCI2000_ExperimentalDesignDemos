@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.45142204, g: 0.500837, b: 0.57190263, a: 1}
+  m_IndirectSpecularColor: {r: 0.4514222, g: 0.500837, b: 0.57190245, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -152,9 +152,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bab0928e0f1f5d5408ef8fc18fdc2abb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OperatorPath: C:/bci2000.x64/prog/Operator.exe
-  TelnetIp: 
-  TelnetPort: 0
+  OperatorPath: 
+  TelnetIp: 10.0.0.100
+  TelnetPort: 3999
   Timeout: 1000
   DontStartModules: 0
   StartWithScene: 1
@@ -167,6 +167,7 @@ MonoBehaviour:
   Module3: DummyApplication
   Module3Args: []
   InitCommands: []
+  LogOutput: 0
   LogFile: log.txt
   LogStates: 1
   LogPrompts: 1

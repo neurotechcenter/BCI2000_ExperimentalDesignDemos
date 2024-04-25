@@ -11,14 +11,17 @@ using UnityEngine;
 public class UnityBCI2000 : MonoBehaviour
 {
     /// <summary>
-    /// The path to the BCI2000 Operator module binary
+    /// The path to the BCI2000 Operator module binary. Has no effect if connecting to a remote instance.
     /// </summary>
     public string OperatorPath;
-    //Use of a remote operator is unsupported due to the fact that UnityBCI2000 will not be able to
-    //function correctly with the amount of communication latency that would exist when using a remote operator.
-    //public string TelnetIp
+    ///	<summary>
+    ///	If set, UnityBCI2000 will attempt to connect to an already running operator at the specified IP address and port. This can be an insance running on the same device, or over the internet. Make sure to specify the address of the remote operator with the --telnet command line option.
+    /// If not set, UnityBCI2000 will start a local instance of BCI2000 using the binary specified by OperatorPath
+    ///	</summary>
     public string TelnetIp;
-    //public int TelnetPort;
+    /// <summary>
+    /// The remote operator's telnet port. Make sure to specify the port of the remote operator wit the --telnet command line option.
+    /// </summary>
     public int TelnetPort;
     /// <summary>
     /// Send and recieve timeout in ms
@@ -49,7 +52,7 @@ public class UnityBCI2000 : MonoBehaviour
     /// </summary>
     public string Module2 = "DummySignalProcessing";
     /// <summary>
-    /// Arguments to pass to the Processing module. '--' at the start of each argument is unnecessary.
+    /// Arguments to pass to the Processing module. '--' at the start of each argument is optional.
     /// </summary>
     public string[] Module2Args;
     /// <summary>
@@ -58,13 +61,17 @@ public class UnityBCI2000 : MonoBehaviour
     /// </summary>
     public string Module3 = "DummyApplication";
     /// <summary>
-    /// Arguments to pass to the Application module. '--' at the start of each argument is unnecessary.
+    /// Arguments to pass to the Application module. '--' at the start of each option is optional..
     /// </summary>
     public string[] Module3Args;
     /// <summary>
     /// Commands to run immediately upon startup of BCI2000. These run before any of the modules are started.
     /// </summary>
     public string[] InitCommands;
+    /// <summary>
+    ///	Output commands and responses to a log file
+    /// </summary>
+    public bool LogOutput;
     /// <summary>
     /// The file to store log output
     /// </summary>
@@ -85,17 +92,20 @@ public class UnityBCI2000 : MonoBehaviour
 
 
     /// <summary>
+    /// DEPRECATED: Use of states with Unity is not recommended, use Events (<see cref="AddEvent">AddEvent()</see>) instead. 
     /// Adds a state to BCI2000. This must be called within the Start() method of a MonoBehviour to work properly.
     /// The added state has a bit width of 32 and initial state of 0.
+    /// Must be called from <c>Awake()</c>
     /// </summary>
     /// <param name="name">The name of the state to add</param>
+    [Obsolete("Using states with Unity is not recommended, use Events (AddEvent) instead.")]
     public void AddState(string name) 
     {
         statenames.Add(name);
     }
 
     /// <summary>
-    /// Adds an event to BCI2000 with bit width 32. This must be called within the `Start()` method of a `MonoBehaviour` to work properly
+    /// Adds an event to BCI2000 with bit width 32. Must be called from Awake()
     /// </summary>
     /// <param name="name"></param>
     public void AddEvent(string name)
@@ -134,10 +144,12 @@ public class UnityBCI2000 : MonoBehaviour
     }
     
     /// <summary>
+    /// DEPRECATED: Use of states with Unity is not recommended, use Events (<see cref="SetEvent">SetEvent()</see>) instead. 
     /// Sets the value of a selected BCI2000 state variable
     /// </summary>
     /// <param name="name">The name of the desired state variable</param>
     /// <param name="value">The value to set the state to. Values less than zero will be instead sent as zero.</param>
+    [Obsolete("Using states with Unity is not recommended, use Events (SetEvent) instead.")]
     public void SetState(string name, int value)
     {
         if (afterFirst)
@@ -152,6 +164,7 @@ public class UnityBCI2000 : MonoBehaviour
     /// </summary>
     /// <param name="name">The name of the desired state variable</param>
     /// <returns>The value of the state variable</returns>
+    [Obsolete("Using states with Unity is not recommended, use Events (GetEvent) instead.")]
     public int GetState(string name)
     {
         if (afterFirst)
@@ -189,7 +202,7 @@ public class UnityBCI2000 : MonoBehaviour
     }
 
     /// <summary>
-    /// Gets the value of an event
+    /// Gets the value of an event. 
     /// </summary>
     /// <param name="eventName">The name of the desired event</param>
     /// <returns>The current value of the event</returns>
@@ -204,7 +217,7 @@ public class UnityBCI2000 : MonoBehaviour
 
 
     /// <summary>
-    /// Adds a parameter to BCI2000. All parameters are treated as strings.
+    /// Adds a parameter to BCI2000. All parameters are treated as strings. Must be called from Awake()
     /// </summary>
     /// <param name="section">The section label for the parameter within BCI2000</param>
     /// <param name="name">The name of the parameter</param>
@@ -216,7 +229,7 @@ public class UnityBCI2000 : MonoBehaviour
     }
 
     /// <summary>
-    /// Adds a parameter to BCI2000. All parameters are treated as strings.
+    /// Adds a parameter to BCI2000. All parameters are treated as strings. Must be called from Awake()
     /// </summary>
     /// <param name="section">The section label for the parameter within BCI2000</param>
     /// <param name="name">The name of the parameter</param>
@@ -227,7 +240,7 @@ public class UnityBCI2000 : MonoBehaviour
     }
 
     /// <summary>
-    /// Adds a parameter to BCI2000. All parameters are treated as strings. Can only be called within Start(), otherwise, will not work.
+    /// Adds a parameter to BCI2000. All parameters are treated as strings. Must be called from Awake().
     /// </summary>
     /// <param name="section">The section label for the parameter within BCI2000</param>
     /// <param name="name">The name of the parameter</param>
@@ -238,7 +251,8 @@ public class UnityBCI2000 : MonoBehaviour
     }
 
     /// <summary>
-    /// Gets a parameter value from BCI2000
+    /// Gets a parameter value from BCI2000.
+    /// This must be used after BCI2000 startup.
     /// </summary>
     /// <param name="name">The name of the parameter to get</param>
     /// <returns>The value of the parameter as a string</returns>
@@ -298,6 +312,7 @@ public class UnityBCI2000 : MonoBehaviour
         if (TelnetPort != 0)
             bci.TelnetPort = TelnetPort;
         bci.Timeout = Timeout;
+	bci.LogOutput = LogOutput;  
         if (!String.IsNullOrWhiteSpace(LogFile))
             bci.LogFile = LogFile;
         bci.LogStates = LogStates;
@@ -334,7 +349,11 @@ public class UnityBCI2000 : MonoBehaviour
             });
         }
 
+        Debug.Log("BCI NOT connected");
+
         bci.WaitForSystemState("Connected");
+
+        Debug.Log("BCI connected");
 
         foreach (string paramfile in parameterFiles) {
             bci.LoadParameters(paramfile);

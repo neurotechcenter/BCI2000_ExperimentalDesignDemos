@@ -43,10 +43,10 @@ public class TargetControl : MonoBehaviour
         bci.SetParam("SampleBlockSize", "50");
 
         // BCI2000 Add Events
-        bci.AddEvent("t1hit", 2);
-        bci.AddEvent("t2hit", 2);
-        bci.AddEvent("t3hit", 2);
-        bci.AddEvent("t4hit", 2);
+        bci.AddEvent("t1hit");
+        bci.AddEvent("t2hit");
+        bci.AddEvent("t3hit");
+        bci.AddEvent("t4hit");
 
         // Add BCI2000 event watches
         bci.ExecuteCommand("visualize watch t1hit");

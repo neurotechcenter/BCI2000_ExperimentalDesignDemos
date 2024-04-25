@@ -36,8 +36,8 @@ public class SphereBehavior : MonoBehaviour
         bci = GameObject.Find("BCI2000").GetComponent<UnityBCI2000>();
 
         // BCI2000 Add Events
-        bci.AddEvent("PositionX", 32);
-        bci.AddEvent("PositionY", 32);
+        bci.AddEvent("PositionX");
+        bci.AddEvent("PositionY");
 
         // Add BCI2000 event watches
         bci.ExecuteCommand("visualize watch MousePosX");
