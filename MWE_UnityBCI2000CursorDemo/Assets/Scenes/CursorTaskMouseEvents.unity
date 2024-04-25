@@ -152,9 +152,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bab0928e0f1f5d5408ef8fc18fdc2abb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OperatorPath: 
-  TelnetIp: 10.0.0.100
-  TelnetPort: 3999
+  OperatorPath: C:\bci2000.x64\prog\Operator.exe
+  TelnetIp: 
+  TelnetPort: 0
   Timeout: 1000
   DontStartModules: 0
   StartWithScene: 1
