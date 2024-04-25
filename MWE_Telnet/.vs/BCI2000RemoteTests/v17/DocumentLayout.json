@@ -1,0 +1,70 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\James\\Desktop\\RemoteTest\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{45564B9C-83EA-4AC1-A979-D93456CE6CDE}|NetworkTest\\NetworkTest.csproj|c:\\users\\james\\desktop\\remotetest\\networktest\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45564B9C-83EA-4AC1-A979-D93456CE6CDE}|NetworkTest\\NetworkTest.csproj|solutionrelative:networktest\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D6F64D8-B124-4EFA-BB80-47344E1B46D8}|RemoteTest\\RemoteTest.csproj|c:\\users\\james\\desktop\\remotetest\\remotetest\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D6F64D8-B124-4EFA-BB80-47344E1B46D8}|RemoteTest\\RemoteTest.csproj|solutionrelative:remotetest\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45564B9C-83EA-4AC1-A979-D93456CE6CDE}|NetworkTest\\NetworkTest.csproj|c:\\users\\james\\desktop\\remotetest\\networktest\\networktest.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{45564B9C-83EA-4AC1-A979-D93456CE6CDE}|NetworkTest\\NetworkTest.csproj|solutionrelative:networktest\\networktest.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\James\\Desktop\\RemoteTest\\RemoteTest\\Program.cs",
+              "RelativeDocumentMoniker": "RemoteTest\\Program.cs",
+              "ToolTip": "C:\\Users\\James\\Desktop\\RemoteTest\\RemoteTest\\Program.cs",
+              "RelativeToolTip": "RemoteTest\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-24T17:36:50.105Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\James\\Desktop\\RemoteTest\\NetworkTest\\Program.cs",
+              "RelativeDocumentMoniker": "NetworkTest\\Program.cs",
+              "ToolTip": "C:\\Users\\James\\Desktop\\RemoteTest\\NetworkTest\\Program.cs",
+              "RelativeToolTip": "NetworkTest\\Program.cs",
+              "ViewState": "AQIAABYAAAAAMzMzMzMLwCcAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-24T15:54:02.854Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "NetworkTest.csproj",
+              "DocumentMoniker": "C:\\Users\\James\\Desktop\\RemoteTest\\NetworkTest\\NetworkTest.csproj",
+              "RelativeDocumentMoniker": "NetworkTest\\NetworkTest.csproj",
+              "ToolTip": "C:\\Users\\James\\Desktop\\RemoteTest\\NetworkTest\\NetworkTest.csproj",
+              "RelativeToolTip": "NetworkTest\\NetworkTest.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-04-24T15:53:50.653Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

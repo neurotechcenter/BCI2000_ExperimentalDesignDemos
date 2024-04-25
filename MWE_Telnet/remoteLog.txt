@@ -1,0 +1,98 @@
+22:00:00:441 Sent:  change directory $BCI2000LAUNCHDIR
+22:00:00:626 Sent:  set title ""
+22:00:00:627 Sent:  show window
+22:00:00:631 Sent:  add event "test_event" 32 5
+22:00:00:635 Sent:  get event test_event
+22:00:00:687 Sent:  shutdown system
+22:00:00:689 Sent:  startup system localhost
+22:00:00:703 Sent:  start executable SignalGenerator --LogKeyboard=1 --LogMouse=1 --LogWebcam=1 --SecondaryBCI2000=1 --local 
+22:00:00:784 Result:  
+SignalGenerator returned 0
+22:00:00:784 Sent:  start executable DummySignalProcessing --local 
+22:00:00:837 Result:  
+SignalGenerator returned 0
+DummySignalProcessing returned 0
+22:00:00:837 Sent:  start executable DummyApplication --local 
+22:00:00:886 Result:  
+SignalGenerator returned 0
+DummySignalProcessing returned 0
+DummyApplication returned 0
+22:00:00:886 Result:  Could not start modules: 
+SignalGenerator returned 0
+DummySignalProcessing returned 0
+DummyApplication returned 0
+22:00:00:887 Sent:  wait for Connected
+22:00:00:939 Sent:  get system state
+22:00:00:945 Sent:  capture messages none warnings errors
+22:00:00:946 Sent:  set config
+22:00:01:025 Sent:  wait for Resting|Initialization
+22:00:01:026 Sent:  capture messages none
+22:00:01:028 Sent:  get system state
+22:00:01:031 Sent:  flush messages
+22:00:01:033 Sent:  start system
+22:00:01:287 Sent:  set event test_event 30
+22:00:02:289 Sent:  get event test_event
+22:00:02:292 Sent:  set event test_event 10
+22:00:03:295 Sent:  set event test_event 15
+22:00:04:298 Sent:  set event test_event 10
+22:00:05:301 Sent:  set event test_event 15
+22:00:06:304 Sent:  set event test_event 10
+22:00:07:307 Sent:  set event test_event 15
+22:00:08:310 Sent:  set event test_event 10
+22:00:09:313 Sent:  set event test_event 15
+22:00:10:316 Sent:  set event test_event 10
+22:00:11:319 Sent:  set event test_event 15
+22:00:12:322 Sent:  set event test_event 10
+22:00:13:325 Sent:  set event test_event 15
+22:00:14:328 Sent:  set event test_event 10
+22:00:15:331 Sent:  set event test_event 15
+22:00:16:334 Sent:  set event test_event 10
+22:00:17:337 Sent:  set event test_event 15
+22:00:18:340 Sent:  set event test_event 10
+22:00:19:343 Sent:  set event test_event 15
+22:00:20:346 Sent:  set event test_event 10
+22:00:21:349 Sent:  set event test_event 15
+22:00:22:351 Sent:  set event test_event 10
+22:00:23:354 Sent:  set event test_event 15
+22:00:24:357 Sent:  set event test_event 10
+22:00:25:361 Sent:  set event test_event 15
+22:00:26:363 Sent:  set event test_event 10
+22:00:27:366 Sent:  set event test_event 15
+22:00:28:369 Sent:  set event test_event 10
+22:00:29:372 Sent:  set event test_event 15
+22:00:30:375 Sent:  set event test_event 10
+22:00:31:377 Sent:  set event test_event 15
+22:00:32:379 Sent:  set event test_event 10
+22:00:33:381 Sent:  set event test_event 15
+22:00:34:383 Sent:  set event test_event 10
+22:00:35:386 Sent:  set event test_event 15
+22:00:36:388 Sent:  set event test_event 10
+22:00:37:390 Sent:  set event test_event 15
+22:00:38:392 Sent:  set event test_event 10
+22:00:39:395 Sent:  set event test_event 15
+22:00:40:397 Sent:  set event test_event 10
+22:00:41:400 Sent:  set event test_event 15
+22:00:42:403 Sent:  set event test_event 10
+22:00:43:406 Sent:  set event test_event 15
+22:00:44:408 Sent:  set event test_event 10
+22:00:45:411 Sent:  set event test_event 15
+22:00:46:413 Sent:  set event test_event 10
+22:00:47:416 Sent:  set event test_event 15
+22:00:48:420 Sent:  set event test_event 10
+22:00:49:423 Sent:  set event test_event 15
+22:00:50:427 Sent:  set event test_event 10
+22:00:51:430 Sent:  set event test_event 15
+22:00:52:434 Sent:  set event test_event 10
+22:00:53:437 Sent:  set event test_event 15
+22:00:54:439 Sent:  set event test_event 10
+22:00:55:442 Sent:  set event test_event 15
+22:00:56:445 Sent:  set event test_event 10
+22:00:57:447 Sent:  set event test_event 15
+22:00:58:450 Sent:  set event test_event 10
+22:00:59:452 Sent:  set event test_event 15
+22:01:00:456 Sent:  set event test_event 10
+22:01:01:460 Sent:  set event test_event 15
+22:01:02:463 Sent:  set event test_event 10
+22:01:02:653 Result:  SocketException: System.Net.Sockets.SocketException (104): Connection reset by peer
+   at System.Net.Sockets.Socket.Send(Byte[] buffer)
+   at BCI2000RemoteNET.BCI2000Connection.Execute(String command, Int32& outCode), socket error code ConnectionReset

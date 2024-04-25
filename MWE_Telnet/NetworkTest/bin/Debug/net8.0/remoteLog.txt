@@ -1,0 +1,5 @@
+16:34:51:972 Sent:  change directory $BCI2000LAUNCHDIR
+16:34:51:988 Sent:  set title ""
+16:34:51:989 Sent:  show window
+16:34:51:993 Sent:  add event "test_event" 32 5
+16:34:51:995 Sent:  get event test_event

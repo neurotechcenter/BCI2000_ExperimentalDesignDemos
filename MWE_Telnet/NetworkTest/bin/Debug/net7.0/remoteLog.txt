@@ -1,0 +1,49 @@
+17:49:26:555 Sent:  change directory $BCI2000LAUNCHDIR
+17:49:26:577 Sent:  set title ""
+17:49:26:583 Sent:  show window
+17:49:26:590 Sent:  add event "test_event" 32 5
+17:49:26:595 Sent:  get event test_event
+17:49:26:618 Sent:  shutdown system
+17:49:26:618 Sent:  startup system localhost
+17:49:26:622 Sent:  start executable SignalGenerator --LogKeyboard=1 --LogMouse=1 --LogWebcam=1 --local 
+17:49:26:630 Result:  
+SignalGenerator returned 0
+17:49:26:630 Sent:  start executable DummySignalProcessing --local 
+17:49:26:699 Result:  
+SignalGenerator returned 0
+DummySignalProcessing returned 0
+17:49:26:699 Sent:  start executable DummyApplication --local 
+17:49:26:716 Result:  
+SignalGenerator returned 0
+DummySignalProcessing returned 0
+DummyApplication returned 0
+17:49:26:716 Result:  Could not start modules: 
+SignalGenerator returned 0
+DummySignalProcessing returned 0
+DummyApplication returned 0
+17:49:26:716 Sent:  wait for Connected
+17:49:26:733 Sent:  visualize watch test_event
+17:49:27:458 Sent:  get system state
+17:49:27:561 Sent:  capture messages none warnings errors
+17:49:27:564 Sent:  set config
+17:49:27:568 Sent:  wait for Resting|Initialization
+17:49:29:197 Sent:  capture messages none
+17:49:29:300 Sent:  get system state
+17:49:29:302 Sent:  flush messages
+17:49:29:311 Sent:  start system
+17:49:29:313 Sent:  set event test_event 30
+17:49:30:572 Sent:  get event test_event
+17:49:30:583 Sent:  set event test_event 10
+17:49:30:633 Sent:  get event test_event
+17:49:31:644 Sent:  set event test_event 15
+17:49:32:647 Sent:  set event test_event 10
+17:49:32:648 Sent:  get event test_event
+17:49:33:692 Sent:  set event test_event 15
+17:49:34:697 Sent:  set event test_event 10
+17:49:34:698 Sent:  get event test_event
+17:49:35:741 Sent:  set event test_event 15
+17:49:36:747 Sent:  set event test_event 10
+17:49:36:748 Sent:  get event test_event
+17:49:37:789 Sent:  set event test_event 15
+17:49:38:794 Sent:  set event test_event 10
+17:49:38:794 Sent:  get event test_event

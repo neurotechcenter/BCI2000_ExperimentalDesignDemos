@@ -1,0 +1,17 @@
+/home/tytbu/bcistuff/RemoteTest/NetworkTest/obj/Debug/net6.0/NetworkTest.GeneratedMSBuildEditorConfig.editorconfig
+/home/tytbu/bcistuff/RemoteTest/NetworkTest/obj/Debug/net6.0/NetworkTest.AssemblyInfoInputs.cache
+/home/tytbu/bcistuff/RemoteTest/NetworkTest/obj/Debug/net6.0/NetworkTest.AssemblyInfo.cs
+/home/tytbu/bcistuff/RemoteTest/NetworkTest/obj/Debug/net6.0/NetworkTest.csproj.CoreCompileInputs.cache
+/home/tytbu/bcistuff/RemoteTest/NetworkTest/bin/Debug/net6.0/NetworkTest
+/home/tytbu/bcistuff/RemoteTest/NetworkTest/bin/Debug/net6.0/NetworkTest.deps.json
+/home/tytbu/bcistuff/RemoteTest/NetworkTest/bin/Debug/net6.0/NetworkTest.runtimeconfig.json
+/home/tytbu/bcistuff/RemoteTest/NetworkTest/bin/Debug/net6.0/NetworkTest.dll
+/home/tytbu/bcistuff/RemoteTest/NetworkTest/bin/Debug/net6.0/NetworkTest.pdb
+/home/tytbu/bcistuff/RemoteTest/NetworkTest/bin/Debug/net6.0/BCI2000RemoteNET.dll
+/home/tytbu/bcistuff/RemoteTest/NetworkTest/obj/Debug/net6.0/NetworkTest.csproj.AssemblyReference.cache
+/home/tytbu/bcistuff/RemoteTest/NetworkTest/obj/Debug/net6.0/NetworkT.730B5590.Up2Date
+/home/tytbu/bcistuff/RemoteTest/NetworkTest/obj/Debug/net6.0/NetworkTest.dll
+/home/tytbu/bcistuff/RemoteTest/NetworkTest/obj/Debug/net6.0/refint/NetworkTest.dll
+/home/tytbu/bcistuff/RemoteTest/NetworkTest/obj/Debug/net6.0/NetworkTest.pdb
+/home/tytbu/bcistuff/RemoteTest/NetworkTest/obj/Debug/net6.0/NetworkTest.genruntimeconfig.cache
+/home/tytbu/bcistuff/RemoteTest/NetworkTest/obj/Debug/net6.0/ref/NetworkTest.dll

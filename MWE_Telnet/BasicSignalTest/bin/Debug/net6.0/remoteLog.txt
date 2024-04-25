@@ -1,0 +1,5 @@
+09:27:20:747 Result:  Failed to connect to 127.0.0.1:3999, No connection could be made because the target machine actively refused it. [::ffff:127.0.0.1]:3999
+09:27:21:266 Sent:  set title ""
+09:27:21:278 Received:  BCI2000 Version 3.6 on winfw
+Type 'help' for a list of commands.
+>

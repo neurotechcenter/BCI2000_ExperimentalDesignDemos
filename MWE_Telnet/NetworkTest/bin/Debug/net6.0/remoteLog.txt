@@ -1,0 +1,34 @@
+18:58:13:241 Sent:  set title ""
+18:58:13:246 Sent:  show window
+18:58:13:247 Sent:  change directory $BCI2000LAUNCHDIR
+18:58:13:247 Sent:  add event "test_event" 32 5
+18:58:13:255 Sent:  get event test_event
+18:58:13:257 Sent:  shutdown system
+18:58:13:257 Sent:  startup system localhost
+18:58:13:262 Sent:  start executable SignalGenerator --LogKeyboard=1 --LogMouse=1 --LogWebcam=1 --SecondaryBCI2000=1 --local 
+18:58:13:312 Result:  
+SignalGenerator returned 0
+18:58:13:312 Sent:  start executable DummySignalProcessing --local 
+18:58:13:351 Result:  
+SignalGenerator returned 0
+DummySignalProcessing returned 0
+18:58:13:351 Sent:  start executable DummyApplication --local 
+18:58:13:416 Result:  
+SignalGenerator returned 0
+DummySignalProcessing returned 0
+DummyApplication returned 0
+18:58:13:416 Result:  Could not start modules: 
+SignalGenerator returned 0
+DummySignalProcessing returned 0
+DummyApplication returned 0
+18:58:13:417 Sent:  wait for Connected
+18:58:13:468 Sent:  get system state
+18:58:13:469 Sent:  capture messages none warnings errors
+18:58:13:469 Sent:  set config
+18:58:13:536 Sent:  wait for Resting|Initialization
+18:58:13:536 Sent:  capture messages none
+18:58:13:536 Sent:  get system state
+18:58:13:537 Sent:  flush messages
+18:58:13:537 Sent:  start system
+18:58:13:638 Sent:  set event test_event 30
+18:58:14:641 Sent:  get event test_event

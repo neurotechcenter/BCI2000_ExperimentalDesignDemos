@@ -1,0 +1,419 @@
+10:40:45:350 Result:  Failed to connect to 127.0.0.1:3999, No connection could be made because the target machine actively refused it. [::ffff:127.0.0.1]:3999
+10:40:45:875 Sent:  set title ""
+10:40:45:885 Received:  BCI2000 Version 3.6 on winfw
+Type 'help' for a list of commands.
+>
+10:40:45:886 Sent:  show window
+10:40:45:886 Sent:  change directory $BCI2000LAUNCHDIR
+10:40:45:887 Sent:  add event "test_event" 32 0
+10:40:45:898 Sent:  shutdown system
+10:40:45:898 Received:  System already in Idle state
+>
+10:40:45:898 Sent:  startup system localhost
+10:40:45:901 Sent:  start executable SignalGenerator --local 
+10:40:45:976 Sent:  start executable DummySignalProcessing --local 
+10:40:46:031 Sent:  start executable DummyApplication --local 
+10:40:46:196 Sent:  wait for Connected
+10:40:46:260 Sent:  get system state
+10:40:46:261 Received:  Initialization
+>
+10:40:46:261 Sent:  capture messages none warnings errors
+10:40:46:262 Sent:  set config
+10:40:46:353 Sent:  wait for Resting|Initialization
+10:40:46:376 Sent:  capture messages none
+10:40:46:376 Sent:  get system state
+10:40:46:377 Received:  Resting
+>
+10:40:46:377 Sent:  flush messages
+10:40:46:377 Sent:  start system
+10:40:47:592 Sent:  set event test_event 1
+10:40:47:938 Sent:  get event test_event
+10:40:47:938 Received:  1
+>
+10:40:47:959 Sent:  set event test_event 0
+10:40:48:984 Sent:  set event test_event 1
+10:40:49:318 Sent:  get event test_event
+10:40:49:318 Received:  1
+>
+10:40:49:337 Sent:  set event test_event 0
+10:40:50:366 Sent:  set event test_event 1
+10:40:50:683 Sent:  get event test_event
+10:40:50:684 Received:  1
+>
+10:40:50:699 Sent:  set event test_event 0
+10:40:51:729 Sent:  set event test_event 1
+10:40:52:033 Sent:  get event test_event
+10:40:52:033 Received:  1
+>
+10:40:52:047 Sent:  set event test_event 0
+10:40:53:075 Sent:  set event test_event 1
+10:40:53:364 Sent:  get event test_event
+10:40:53:364 Received:  1
+>
+10:40:53:380 Sent:  set event test_event 0
+10:40:54:409 Sent:  set event test_event 1
+10:40:54:682 Sent:  get event test_event
+10:40:54:683 Received:  1
+>
+10:40:54:703 Sent:  set event test_event 0
+10:40:55:733 Sent:  set event test_event 1
+10:40:55:991 Sent:  get event test_event
+10:40:55:991 Received:  1
+>
+10:40:56:008 Sent:  set event test_event 0
+10:40:57:025 Sent:  set event test_event 1
+10:40:57:267 Sent:  get event test_event
+10:40:57:267 Received:  1
+>
+10:40:57:286 Sent:  set event test_event 0
+10:40:58:312 Sent:  set event test_event 1
+10:40:58:539 Sent:  get event test_event
+10:40:58:539 Received:  1
+>
+10:40:58:556 Sent:  set event test_event 0
+10:40:59:584 Sent:  set event test_event 1
+10:40:59:796 Sent:  get event test_event
+10:40:59:796 Received:  0
+>
+10:40:59:818 Sent:  set event test_event 0
+10:41:00:841 Sent:  set event test_event 1
+10:41:01:035 Sent:  get event test_event
+10:41:01:036 Received:  0
+>
+10:41:01:052 Sent:  set event test_event 0
+10:41:02:084 Sent:  set event test_event 1
+10:41:02:251 Sent:  get event test_event
+10:41:02:251 Received:  0
+>
+10:41:02:266 Sent:  set event test_event 0
+10:41:03:284 Sent:  set event test_event 1
+10:41:03:436 Sent:  get event test_event
+10:41:03:436 Received:  0
+>
+10:41:03:454 Sent:  set event test_event 0
+10:41:04:484 Sent:  set event test_event 1
+10:41:04:620 Sent:  get event test_event
+10:41:04:621 Received:  0
+>
+10:41:04:637 Sent:  set event test_event 0
+10:41:05:666 Sent:  set event test_event 1
+10:41:05:788 Sent:  get event test_event
+10:41:05:789 Received:  0
+>
+10:41:05:808 Sent:  set event test_event 0
+10:41:06:833 Sent:  set event test_event 1
+10:41:06:939 Sent:  get event test_event
+10:41:06:940 Received:  0
+>
+10:41:06:956 Sent:  set event test_event 0
+10:41:07:987 Sent:  set event test_event 1
+10:41:08:077 Sent:  get event test_event
+10:41:08:077 Received:  0
+>
+10:41:08:095 Sent:  set event test_event 0
+10:41:09:120 Sent:  set event test_event 1
+10:41:09:196 Sent:  get event test_event
+10:41:09:197 Received:  0
+>
+10:41:09:212 Sent:  set event test_event 0
+10:41:10:230 Sent:  set event test_event 1
+10:41:10:290 Sent:  get event test_event
+10:41:10:291 Received:  0
+>
+10:41:10:309 Sent:  set event test_event 0
+10:41:11:337 Sent:  set event test_event 1
+10:41:11:383 Sent:  get event test_event
+10:41:11:383 Received:  0
+>
+10:41:11:399 Sent:  set event test_event 0
+10:41:12:430 Sent:  set event test_event 1
+10:41:12:582 Sent:  get event test_event
+10:41:12:583 Received:  1
+>
+10:41:12:599 Sent:  set event test_event 0
+10:41:13:614 Sent:  set event test_event 1
+10:41:13:766 Sent:  get event test_event
+10:41:13:766 Received:  0
+>
+10:41:13:783 Sent:  set event test_event 0
+10:41:14:813 Sent:  set event test_event 1
+10:41:14:965 Sent:  get event test_event
+10:41:14:966 Received:  0
+>
+10:41:14:979 Sent:  set event test_event 0
+10:41:15:992 Sent:  set event test_event 1
+10:41:16:144 Sent:  get event test_event
+10:41:16:144 Received:  0
+>
+10:41:16:161 Sent:  set event test_event 0
+10:41:17:190 Sent:  set event test_event 1
+10:41:17:341 Sent:  get event test_event
+10:41:17:342 Received:  0
+>
+10:41:17:359 Sent:  set event test_event 0
+10:41:18:388 Sent:  set event test_event 1
+10:41:18:539 Sent:  get event test_event
+10:41:18:540 Received:  0
+>
+10:41:18:557 Sent:  set event test_event 0
+10:41:19:585 Sent:  set event test_event 1
+10:41:19:735 Sent:  get event test_event
+10:41:19:736 Received:  0
+>
+10:41:19:751 Sent:  set event test_event 0
+10:41:20:766 Sent:  set event test_event 1
+10:41:20:918 Sent:  get event test_event
+10:41:20:918 Received:  0
+>
+10:41:20:931 Sent:  set event test_event 0
+10:41:21:948 Sent:  set event test_event 1
+10:41:22:101 Sent:  get event test_event
+10:41:22:124 Received:  0
+>
+10:41:22:142 Sent:  set event test_event 0
+10:41:23:161 Sent:  set event test_event 1
+10:41:23:313 Sent:  get event test_event
+10:41:23:313 Received:  1
+>
+10:41:23:329 Sent:  set event test_event 0
+10:41:24:344 Sent:  set event test_event 1
+10:41:24:495 Sent:  get event test_event
+10:41:24:496 Received:  0
+>
+10:41:24:513 Sent:  set event test_event 0
+10:41:25:543 Sent:  set event test_event 1
+10:41:25:695 Sent:  get event test_event
+10:41:25:695 Received:  1
+>
+10:41:25:713 Sent:  set event test_event 0
+10:41:26:743 Sent:  set event test_event 1
+10:41:26:894 Sent:  get event test_event
+10:41:26:895 Received:  0
+>
+10:41:26:908 Sent:  set event test_event 0
+10:41:27:923 Sent:  set event test_event 1
+10:41:28:074 Sent:  get event test_event
+10:41:28:074 Received:  1
+>
+10:41:28:090 Sent:  set event test_event 0
+10:41:29:105 Sent:  set event test_event 1
+10:41:29:257 Sent:  get event test_event
+10:41:29:257 Received:  0
+>
+10:41:29:274 Sent:  set event test_event 0
+10:41:30:303 Sent:  set event test_event 1
+10:41:30:470 Sent:  get event test_event
+10:41:30:470 Received:  1
+>
+10:41:30:488 Sent:  set event test_event 0
+10:41:31:516 Sent:  set event test_event 1
+10:41:31:668 Sent:  get event test_event
+10:41:31:668 Received:  0
+>
+10:41:31:685 Sent:  set event test_event 0
+10:41:32:713 Sent:  set event test_event 1
+10:41:32:878 Sent:  get event test_event
+10:41:32:879 Received:  0
+>
+10:41:32:897 Sent:  set event test_event 0
+10:41:33:913 Sent:  set event test_event 1
+10:41:34:064 Sent:  get event test_event
+10:41:34:065 Received:  1
+>
+10:41:34:079 Sent:  set event test_event 0
+10:41:35:108 Sent:  set event test_event 1
+10:41:35:258 Sent:  get event test_event
+10:41:35:259 Received:  0
+>
+10:41:35:272 Sent:  set event test_event 0
+10:41:36:288 Sent:  set event test_event 1
+10:41:36:439 Sent:  get event test_event
+10:41:36:439 Received:  1
+>
+10:41:36:454 Sent:  set event test_event 0
+10:41:37:482 Sent:  set event test_event 1
+10:41:37:633 Sent:  get event test_event
+10:41:37:633 Received:  0
+>
+10:41:37:647 Sent:  set event test_event 0
+10:41:38:666 Sent:  set event test_event 1
+10:41:38:817 Sent:  get event test_event
+10:41:38:818 Received:  1
+>
+10:41:38:832 Sent:  set event test_event 0
+10:41:39:850 Sent:  set event test_event 1
+10:41:40:001 Sent:  get event test_event
+10:41:40:001 Received:  0
+>
+10:41:40:019 Sent:  set event test_event 0
+10:41:41:047 Sent:  set event test_event 1
+10:41:41:200 Sent:  get event test_event
+10:41:41:208 Received:  1
+>
+10:41:41:225 Sent:  set event test_event 0
+10:41:42:247 Sent:  set event test_event 1
+10:41:42:397 Sent:  get event test_event
+10:41:42:398 Received:  0
+>
+10:41:42:413 Sent:  set event test_event 0
+10:41:43:445 Sent:  set event test_event 1
+10:41:43:598 Sent:  get event test_event
+10:41:43:598 Received:  0
+>
+10:41:43:616 Sent:  set event test_event 0
+10:41:44:630 Sent:  set event test_event 1
+10:41:44:781 Sent:  get event test_event
+10:41:44:782 Received:  0
+>
+10:41:44:801 Sent:  set event test_event 0
+10:41:45:829 Sent:  set event test_event 1
+10:41:45:982 Sent:  get event test_event
+10:41:45:982 Received:  0
+>
+10:41:45:999 Sent:  set event test_event 0
+10:41:47:027 Sent:  set event test_event 1
+10:41:47:179 Sent:  get event test_event
+10:41:47:179 Received:  0
+>
+10:41:47:196 Sent:  set event test_event 0
+10:41:48:223 Sent:  set event test_event 1
+10:41:48:390 Sent:  get event test_event
+10:41:48:390 Received:  0
+>
+10:41:48:404 Sent:  set event test_event 0
+10:41:49:435 Sent:  set event test_event 1
+10:41:49:585 Sent:  get event test_event
+10:41:49:586 Received:  1
+>
+10:41:49:600 Sent:  set event test_event 0
+10:41:50:633 Sent:  set event test_event 1
+10:41:50:785 Sent:  get event test_event
+10:41:50:785 Received:  0
+>
+10:41:50:795 Sent:  set event test_event 0
+10:41:51:818 Sent:  set event test_event 1
+10:41:51:972 Sent:  get event test_event
+10:41:51:972 Received:  0
+>
+10:41:51:983 Sent:  set event test_event 0
+10:41:53:004 Sent:  set event test_event 1
+10:41:53:154 Sent:  get event test_event
+10:41:53:155 Received:  0
+>
+10:41:53:174 Sent:  set event test_event 0
+10:41:54:205 Sent:  set event test_event 1
+10:41:54:355 Sent:  get event test_event
+10:41:54:356 Received:  0
+>
+10:41:54:371 Sent:  set event test_event 0
+10:41:55:385 Sent:  set event test_event 1
+10:41:55:537 Sent:  get event test_event
+10:41:55:537 Received:  0
+>
+10:41:55:556 Sent:  set event test_event 0
+10:41:56:580 Sent:  set event test_event 1
+10:41:56:746 Sent:  get event test_event
+10:41:56:747 Received:  0
+>
+10:41:56:764 Sent:  set event test_event 0
+10:41:57:789 Sent:  set event test_event 1
+10:41:57:956 Sent:  get event test_event
+10:41:57:956 Received:  1
+>
+10:41:57:969 Sent:  set event test_event 0
+10:41:58:986 Sent:  set event test_event 1
+10:41:59:137 Sent:  get event test_event
+10:41:59:137 Received:  0
+>
+10:41:59:155 Sent:  set event test_event 0
+10:42:00:182 Sent:  set event test_event 1
+10:42:00:334 Sent:  get event test_event
+10:42:00:334 Received:  1
+>
+10:42:00:354 Sent:  set event test_event 0
+10:42:01:379 Sent:  set event test_event 1
+10:42:01:530 Sent:  get event test_event
+10:42:01:530 Received:  0
+>
+10:42:01:545 Sent:  set event test_event 0
+10:42:02:574 Sent:  set event test_event 1
+10:42:02:725 Sent:  get event test_event
+10:42:02:726 Received:  0
+>
+10:42:02:742 Sent:  set event test_event 0
+10:42:03:772 Sent:  set event test_event 1
+10:42:03:938 Sent:  get event test_event
+10:42:03:938 Received:  1
+>
+10:42:03:955 Sent:  set event test_event 0
+10:42:04:968 Sent:  set event test_event 1
+10:42:05:120 Sent:  get event test_event
+10:42:05:120 Received:  0
+>
+10:42:05:139 Sent:  set event test_event 0
+10:42:06:162 Sent:  set event test_event 1
+10:42:06:328 Sent:  get event test_event
+10:42:06:328 Received:  1
+>
+10:42:06:346 Sent:  set event test_event 0
+10:42:07:371 Sent:  set event test_event 1
+10:42:07:524 Sent:  get event test_event
+10:42:07:524 Received:  0
+>
+10:42:07:539 Sent:  set event test_event 0
+10:42:08:558 Sent:  set event test_event 1
+10:42:08:708 Sent:  get event test_event
+10:42:08:709 Received:  0
+>
+10:42:08:726 Sent:  set event test_event 0
+10:42:09:754 Sent:  set event test_event 1
+10:42:09:905 Sent:  get event test_event
+10:42:09:906 Received:  0
+>
+10:42:09:923 Sent:  set event test_event 0
+10:42:10:949 Sent:  set event test_event 1
+10:42:11:100 Sent:  get event test_event
+10:42:11:100 Received:  0
+>
+10:42:11:120 Sent:  set event test_event 0
+10:42:12:146 Sent:  set event test_event 1
+10:42:12:299 Sent:  get event test_event
+10:42:12:299 Received:  0
+>
+10:42:12:331 Sent:  set event test_event 0
+10:42:13:357 Sent:  set event test_event 1
+10:42:13:357 Received:  Could not set event test_event to 1
+>
+10:42:13:508 Sent:  get event test_event
+10:42:13:508 Received:  0
+>
+10:42:13:524 Sent:  set event test_event 0
+10:42:13:524 Received:  Could not set event test_event to 0
+>
+10:42:14:538 Sent:  set event test_event 1
+10:42:14:539 Received:  Could not set event test_event to 1
+>
+10:42:14:689 Sent:  get event test_event
+10:42:14:690 Received:  0
+>
+10:42:14:707 Sent:  set event test_event 0
+10:42:14:707 Received:  Could not set event test_event to 0
+>
+10:42:15:733 Sent:  set event test_event 1
+10:42:15:733 Received:  Could not set event test_event to 1
+>
+10:42:15:885 Sent:  get event test_event
+10:42:15:885 Received:  0
+>
+10:42:15:906 Sent:  set event test_event 0
+10:42:15:907 Received:  Could not set event test_event to 0
+>
+10:42:16:932 Sent:  set event test_event 1
+10:42:16:932 Received:  Could not set event test_event to 1
+>
+10:42:17:084 Sent:  get event test_event
+10:42:17:085 Received:  0
+>
+10:42:17:102 Sent:  set event test_event 0
+10:42:17:102 Received:  Could not set event test_event to 0
+>

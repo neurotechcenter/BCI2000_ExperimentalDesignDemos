@@ -1,0 +1,59 @@
+16:32:55:746 Sent:  change directory $BCI2000LAUNCHDIR
+16:32:55:766 Sent:  set title ""
+16:32:55:767 Sent:  show window
+16:32:55:773 Sent:  add event "test_event" 32 5
+16:32:55:778 Sent:  shutdown system
+16:32:55:779 Sent:  startup system localhost
+16:32:55:783 Sent:  start executable SignalGenerator --LogKeyboard=1 --LogMouse=1 --LogWebcam=1 --local 
+16:32:55:787 Result:  
+SignalGenerator returned 0
+16:32:55:787 Sent:  start executable DummySignalProcessing --local 
+16:32:55:848 Result:  
+SignalGenerator returned 0
+DummySignalProcessing returned 0
+16:32:55:848 Sent:  start executable DummyApplication --local 
+16:32:55:866 Result:  
+SignalGenerator returned 0
+DummySignalProcessing returned 0
+DummyApplication returned 0
+16:32:55:866 Result:  Could not start modules: 
+SignalGenerator returned 0
+DummySignalProcessing returned 0
+DummyApplication returned 0
+16:32:55:866 Sent:  wait for Connected
+16:32:55:884 Sent:  visualize watch test_event
+16:32:56:493 Sent:  get system state
+16:32:56:496 Sent:  capture messages none warnings errors
+16:32:56:498 Sent:  set config
+16:32:56:499 Sent:  wait for Resting|Initialization
+16:32:57:874 Sent:  capture messages none
+16:32:57:875 Sent:  get system state
+16:32:57:879 Sent:  flush messages
+16:32:57:881 Sent:  start system
+16:32:57:884 Sent:  set event test_event 30
+16:32:59:151 Sent:  set event test_event 10
+16:33:00:166 Sent:  set event test_event 15
+16:33:01:181 Sent:  set event test_event 10
+16:33:02:197 Sent:  set event test_event 15
+16:33:03:212 Sent:  set event test_event 10
+16:33:04:228 Sent:  set event test_event 15
+16:33:05:243 Sent:  set event test_event 10
+16:33:06:258 Sent:  set event test_event 15
+16:33:07:274 Sent:  set event test_event 10
+16:33:08:289 Sent:  set event test_event 15
+16:33:09:305 Sent:  set event test_event 10
+16:33:10:320 Sent:  set event test_event 15
+16:33:11:335 Sent:  set event test_event 10
+16:33:12:351 Sent:  set event test_event 15
+16:33:13:366 Sent:  set event test_event 10
+16:33:14:382 Sent:  set event test_event 15
+16:33:15:397 Sent:  set event test_event 10
+16:33:16:412 Sent:  set event test_event 15
+16:33:17:428 Sent:  set event test_event 10
+16:33:18:443 Sent:  set event test_event 15
+16:33:19:459 Sent:  set event test_event 10
+16:33:20:474 Sent:  set event test_event 15
+16:33:21:489 Sent:  set event test_event 10
+16:33:21:502 Result:  SocketException: System.Net.Sockets.SocketException (10054): An existing connection was forcibly closed by the remote host.
+   at System.Net.Sockets.Socket.Send(Byte[] buffer)
+   at BCI2000RemoteNET.BCI2000Connection.Execute(String command, Int32& outCode), socket error code ConnectionReset

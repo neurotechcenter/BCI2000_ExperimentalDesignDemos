@@ -1,0 +1,17 @@
+C:\Users\James\Desktop\RemoteTest\NetworkTest\bin\Release\net8.0\NetworkTest.exe
+C:\Users\James\Desktop\RemoteTest\NetworkTest\bin\Release\net8.0\NetworkTest.deps.json
+C:\Users\James\Desktop\RemoteTest\NetworkTest\bin\Release\net8.0\NetworkTest.runtimeconfig.json
+C:\Users\James\Desktop\RemoteTest\NetworkTest\bin\Release\net8.0\NetworkTest.dll
+C:\Users\James\Desktop\RemoteTest\NetworkTest\bin\Release\net8.0\NetworkTest.pdb
+C:\Users\James\Desktop\RemoteTest\NetworkTest\bin\Release\net8.0\BCI2000RemoteNET.dll
+C:\Users\James\Desktop\RemoteTest\NetworkTest\obj\Release\net8.0\NetworkTest.csproj.AssemblyReference.cache
+C:\Users\James\Desktop\RemoteTest\NetworkTest\obj\Release\net8.0\NetworkTest.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\James\Desktop\RemoteTest\NetworkTest\obj\Release\net8.0\NetworkTest.AssemblyInfoInputs.cache
+C:\Users\James\Desktop\RemoteTest\NetworkTest\obj\Release\net8.0\NetworkTest.AssemblyInfo.cs
+C:\Users\James\Desktop\RemoteTest\NetworkTest\obj\Release\net8.0\NetworkTest.csproj.CoreCompileInputs.cache
+C:\Users\James\Desktop\RemoteTest\NetworkTest\obj\Release\net8.0\NetworkT.730B5590.Up2Date
+C:\Users\James\Desktop\RemoteTest\NetworkTest\obj\Release\net8.0\NetworkTest.dll
+C:\Users\James\Desktop\RemoteTest\NetworkTest\obj\Release\net8.0\refint\NetworkTest.dll
+C:\Users\James\Desktop\RemoteTest\NetworkTest\obj\Release\net8.0\NetworkTest.pdb
+C:\Users\James\Desktop\RemoteTest\NetworkTest\obj\Release\net8.0\NetworkTest.genruntimeconfig.cache
+C:\Users\James\Desktop\RemoteTest\NetworkTest\obj\Release\net8.0\ref\NetworkTest.dll
