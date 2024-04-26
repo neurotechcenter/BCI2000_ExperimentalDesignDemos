@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "h4EjdpjhVLK1tjkrtntaSXAhWtalaN4JltP725WucaJVRIKzEHMOE8wh91FwXw7wMoLyjbWrKBdiAvxMVOu32Q==",
+  "dgSpecHash": "JhPU5RTy7mIc7QwX+Hwtxc4Lca+Y6AZ6qq/fzAr63Dgm7SXQRB74dRKgQkoUwO3bMccCL6PbjBneOg5L3+KKUg==",
   "success": true,
-  "projectFilePath": "/Users/jamesswift/Documents/git/ExperimentalDesignDemos/MWE_Telnet/RemoteTest/RemoteTest.csproj",
+  "projectFilePath": "D:\\Users\\swift\\Documents\\GitHub\\ExperimentalDesignDemos\\Csharp_Telnet_BCI2000RemoteNET\\RemoteTest\\RemoteTest.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

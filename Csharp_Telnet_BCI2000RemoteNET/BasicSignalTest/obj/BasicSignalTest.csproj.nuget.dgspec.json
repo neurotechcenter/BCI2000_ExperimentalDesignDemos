@@ -1,26 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/Users/jamesswift/Documents/git/ExperimentalDesignDemos/MWE_Telnet/BasicSignalTest/BasicSignalTest.csproj": {}
+    "D:\\Users\\swift\\Documents\\GitHub\\ExperimentalDesignDemos\\Csharp_Telnet_BCI2000RemoteNET\\BasicSignalTest\\BasicSignalTest.csproj": {}
   },
   "projects": {
-    "/Users/jamesswift/Documents/git/ExperimentalDesignDemos/MWE_Telnet/BasicSignalTest/BasicSignalTest.csproj": {
+    "D:\\Users\\swift\\Documents\\GitHub\\ExperimentalDesignDemos\\Csharp_Telnet_BCI2000RemoteNET\\BasicSignalTest\\BasicSignalTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/jamesswift/Documents/git/ExperimentalDesignDemos/MWE_Telnet/BasicSignalTest/BasicSignalTest.csproj",
+        "projectUniqueName": "D:\\Users\\swift\\Documents\\GitHub\\ExperimentalDesignDemos\\Csharp_Telnet_BCI2000RemoteNET\\BasicSignalTest\\BasicSignalTest.csproj",
         "projectName": "BasicSignalTest",
-        "projectPath": "/Users/jamesswift/Documents/git/ExperimentalDesignDemos/MWE_Telnet/BasicSignalTest/BasicSignalTest.csproj",
-        "packagesPath": "/Users/jamesswift/.nuget/packages/",
-        "outputPath": "/Users/jamesswift/Documents/git/ExperimentalDesignDemos/MWE_Telnet/BasicSignalTest/obj/",
+        "projectPath": "D:\\Users\\swift\\Documents\\GitHub\\ExperimentalDesignDemos\\Csharp_Telnet_BCI2000RemoteNET\\BasicSignalTest\\BasicSignalTest.csproj",
+        "packagesPath": "C:\\Users\\swift\\.nuget\\packages\\",
+        "outputPath": "D:\\Users\\swift\\Documents\\GitHub\\ExperimentalDesignDemos\\Csharp_Telnet_BCI2000RemoteNET\\BasicSignalTest\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/jamesswift/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\swift\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "/usr/local/share/dotnet/library-packs": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -54,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.315/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

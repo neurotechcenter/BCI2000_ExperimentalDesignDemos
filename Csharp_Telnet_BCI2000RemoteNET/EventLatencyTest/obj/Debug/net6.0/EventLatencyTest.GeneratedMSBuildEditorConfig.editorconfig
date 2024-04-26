@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = EventLatencyTest
-build_property.ProjectDir = /Users/jamesswift/Documents/git/ExperimentalDesignDemos/MWE_Telnet/EventLatencyTest/
+build_property.ProjectDir = D:\Users\swift\Documents\GitHub\ExperimentalDesignDemos\Csharp_Telnet_BCI2000RemoteNET\EventLatencyTest\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

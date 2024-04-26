@@ -8,25 +8,26 @@
     "net6.0": []
   },
   "packageFolders": {
-    "/Users/jamesswift/.nuget/packages/": {}
+    "C:\\Users\\swift\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/jamesswift/Documents/git/ExperimentalDesignDemos/MWE_Telnet/EventLatencyTest/EventLatencyTest.csproj",
+      "projectUniqueName": "D:\\Users\\swift\\Documents\\GitHub\\ExperimentalDesignDemos\\Csharp_Telnet_BCI2000RemoteNET\\EventLatencyTest\\EventLatencyTest.csproj",
       "projectName": "EventLatencyTest",
-      "projectPath": "/Users/jamesswift/Documents/git/ExperimentalDesignDemos/MWE_Telnet/EventLatencyTest/EventLatencyTest.csproj",
-      "packagesPath": "/Users/jamesswift/.nuget/packages/",
-      "outputPath": "/Users/jamesswift/Documents/git/ExperimentalDesignDemos/MWE_Telnet/EventLatencyTest/obj/",
+      "projectPath": "D:\\Users\\swift\\Documents\\GitHub\\ExperimentalDesignDemos\\Csharp_Telnet_BCI2000RemoteNET\\EventLatencyTest\\EventLatencyTest.csproj",
+      "packagesPath": "C:\\Users\\swift\\.nuget\\packages\\",
+      "outputPath": "D:\\Users\\swift\\Documents\\GitHub\\ExperimentalDesignDemos\\Csharp_Telnet_BCI2000RemoteNET\\EventLatencyTest\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/jamesswift/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\swift\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "/usr/local/share/dotnet/library-packs": {},
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -60,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.315/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -2,7 +2,10 @@ import sys
 import os
 import random
 
-BCI2000_python_tools = 'C:\\bci2000.x64\\tools\\python\\'
+default = 'C:\\bci2000.x64\\tools\\python\\'
+BCI2000_python_tools = input('Enter path to BCI2000 python tools (default is '+default+'): ')
+if not BCI2000_python_tools:
+   BCI2000_python_tools = default
 
 sys.path.append(BCI2000_python_tools)
 

@@ -46,7 +46,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% Set the path of the BCI2000 main directory here
-settings.BCI2000path = fullfile('C:','bci2000.x64');
+prompt               = {'Enter path to BCI2000 root directory: '};
+dlgtitle             = 'Enter BCI2000 path';
+fieldsize            = [1 45];
+definput             = {fullfile('C:','bci2000.x64')};
+userinput            = inputdlg(prompt,dlgtitle,fieldsize,definput);
+settings.BCI2000path = userinput{1};
 
 % Add BCI2000 tools to path
 addpath(genpath(fullfile(settings.BCI2000path,'tools')))

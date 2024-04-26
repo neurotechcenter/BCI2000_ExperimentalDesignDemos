@@ -1,2 +1,2 @@
 Reset system
-matlab.exe -nosplash -nojvm -r "try; run('MWEBCI2000Remote_MATLAB_mac.m'); catch; end; quit"
+matlab.exe -nosplash -nojvm -r "try; run('Matlab_BCI2000Remote.m'); catch; end; quit"

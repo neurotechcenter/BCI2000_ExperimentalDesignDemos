@@ -26,29 +26,26 @@ Console.WriteLine(reply.Status.ToString());
 
 bci.Connect();
 
+bci.AddEvent("test_event", 32, 5); // event name, bit width, initial value
 
-bci.AddEvent("test_event", 32, 5);
-//Console.WriteLine("First get event");
-//bci.GetEvent("test_event");
-
-/*bci.StartupModules(new Dictionary<string, List<string>>() {
+bci.StartupModules(new Dictionary<string, List<string>>() {
     {"SignalGenerator",       new List<string>(){"LogKeyboard=1", "LogMouse=1"} },
     {"DummySignalProcessing", new List<string>() },
     {"DummyApplication",      new List<string>() } });
 
 
-Console.WriteLine("wait state");
+Console.WriteLine("Waiting to connect...");
 bci.WaitForSystemState("Connected");
-Console.WriteLine("end wait");
-*/
+Console.WriteLine("Connected!");
 
 bci.Execute("visualize watch test_event");
 
-//bci.Start();
+bci.Start();
+
 bci.SetEvent("test_event", 30);
-Thread.Sleep(1000);
-//Console.WriteLine("Second get event");
-//Console.WriteLine(bci.GetEvent("test_event"));
+
+//Thread.Sleep(1000);
+//Console.WriteLine("event return value: " + bci.GetEvent("test_event"));
 
 
 while (true) { 

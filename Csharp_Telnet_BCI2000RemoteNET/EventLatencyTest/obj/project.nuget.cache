@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PewwCmlPeKvzxdgTD4v0NllH8xDYiPsZudTDv7b73grR7Z82Ce03BbN33RpmNEqQwvWVK6PXXHv2s68mjganUg==",
+  "dgSpecHash": "48QJfEOPo+rahcnhfsSxfTu+/0XZ6BPqLzjh5xqq6FXOQg/J9W8zzY8zUp77Cn8Xq3Qb3tl7rnGo5f5zZd6hrA==",
   "success": true,
-  "projectFilePath": "/Users/jamesswift/Documents/git/ExperimentalDesignDemos/MWE_Telnet/EventLatencyTest/EventLatencyTest.csproj",
+  "projectFilePath": "D:\\Users\\swift\\Documents\\GitHub\\ExperimentalDesignDemos\\Csharp_Telnet_BCI2000RemoteNET\\EventLatencyTest\\EventLatencyTest.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

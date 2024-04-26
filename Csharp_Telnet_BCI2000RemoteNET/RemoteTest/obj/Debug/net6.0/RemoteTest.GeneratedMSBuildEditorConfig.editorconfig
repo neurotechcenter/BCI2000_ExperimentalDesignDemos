@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = RemoteTest
-build_property.ProjectDir = /Users/jamesswift/Documents/git/ExperimentalDesignDemos/MWE_Telnet/RemoteTest/
+build_property.ProjectDir = D:\Users\swift\Documents\GitHub\ExperimentalDesignDemos\Csharp_Telnet_BCI2000RemoteNET\RemoteTest\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

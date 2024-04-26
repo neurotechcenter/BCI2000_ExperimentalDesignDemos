@@ -1,1 +1,1 @@
-python3.8 -i "MWEBCI2000Remote.py"
+python -i "Python_BCI2000Remote.py"

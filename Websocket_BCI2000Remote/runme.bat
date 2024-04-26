@@ -1,5 +1,7 @@
+set /p userinputpath=Please enter your bci2000 root directory: 
+set bci2000path=%userinputpath%\prog
+
 set launchpath=%cd%
-set bci2000path=C:\bci2000.x64\prog
 
 C:
 cd %bci2000path%
