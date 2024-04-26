@@ -1,2 +1,0 @@
-13:17:50:476 Result:  Not connected, call BCI2000Connection.Connect() to connect.
-13:17:50:476 Result:  Not connected, call BCI2000Connection.Connect() to connect.
