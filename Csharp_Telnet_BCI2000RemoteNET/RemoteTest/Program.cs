@@ -15,8 +15,7 @@ Console.WriteLine("First event test");
 Console.WriteLine(bci.GetEvent("test_event"));
 
 bci.StartupModules(new Dictionary<string, List<string>>() {
-    //{"NihonKohdenSource", new List<string>(){"LogEyetrackerTobiiPro=1", "LogKeyboard=1", "LogMouse=1", "LogWebcam=1", "SecondaryBCI2000=0"} },
-    {"SignalGenerator", new List<string>(){"LogKeyboard=1", "LogMouse=1", "LogWebcam=1", "SecondaryBCI2000=1"} },
+        {"SignalGenerator", new List<string>(){"LogKeyboard=1", "LogMouse=1", "LogWebcam=1"} },
     {"DummySignalProcessing", new List<string>() },
     {"DummyApplication", new List<string>() } });
 

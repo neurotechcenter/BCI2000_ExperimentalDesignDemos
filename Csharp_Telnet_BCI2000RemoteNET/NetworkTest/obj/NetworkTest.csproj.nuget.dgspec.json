@@ -1,27 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Users\\swift\\Documents\\GitHub\\ExperimentalDesignDemos\\Csharp_Telnet_BCI2000RemoteNET\\NetworkTest\\NetworkTest.csproj": {}
+    "/Users/jamesswift/Documents/git/ExperimentalDesignDemos/Csharp_Telnet_BCI2000RemoteNET/NetworkTest/NetworkTest.csproj": {}
   },
   "projects": {
-    "D:\\Users\\swift\\Documents\\GitHub\\ExperimentalDesignDemos\\Csharp_Telnet_BCI2000RemoteNET\\NetworkTest\\NetworkTest.csproj": {
+    "/Users/jamesswift/Documents/git/ExperimentalDesignDemos/Csharp_Telnet_BCI2000RemoteNET/NetworkTest/NetworkTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Users\\swift\\Documents\\GitHub\\ExperimentalDesignDemos\\Csharp_Telnet_BCI2000RemoteNET\\NetworkTest\\NetworkTest.csproj",
+        "projectUniqueName": "/Users/jamesswift/Documents/git/ExperimentalDesignDemos/Csharp_Telnet_BCI2000RemoteNET/NetworkTest/NetworkTest.csproj",
         "projectName": "NetworkTest",
-        "projectPath": "D:\\Users\\swift\\Documents\\GitHub\\ExperimentalDesignDemos\\Csharp_Telnet_BCI2000RemoteNET\\NetworkTest\\NetworkTest.csproj",
-        "packagesPath": "C:\\Users\\swift\\.nuget\\packages\\",
-        "outputPath": "D:\\Users\\swift\\Documents\\GitHub\\ExperimentalDesignDemos\\Csharp_Telnet_BCI2000RemoteNET\\NetworkTest\\obj\\",
+        "projectPath": "/Users/jamesswift/Documents/git/ExperimentalDesignDemos/Csharp_Telnet_BCI2000RemoteNET/NetworkTest/NetworkTest.csproj",
+        "packagesPath": "/Users/jamesswift/.nuget/packages/",
+        "outputPath": "/Users/jamesswift/Documents/git/ExperimentalDesignDemos/Csharp_Telnet_BCI2000RemoteNET/NetworkTest/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\swift\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/jamesswift/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "/usr/local/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -55,7 +54,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.315/RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -26,21 +26,7 @@ Console.WriteLine(reply.Status.ToString());
 
 bci.Connect();
 
-bci.AddEvent("test_event", 32, 5); // event name, bit width, initial value
-
-bci.StartupModules(new Dictionary<string, List<string>>() {
-    {"SignalGenerator",       new List<string>(){"LogKeyboard=1", "LogMouse=1"} },
-    {"DummySignalProcessing", new List<string>() },
-    {"DummyApplication",      new List<string>() } });
-
-
-Console.WriteLine("Waiting to connect...");
-bci.WaitForSystemState("Connected");
-Console.WriteLine("Connected!");
-
-bci.Execute("visualize watch test_event");
-
-bci.Start();
+// event added in batch file on receiving computer
 
 bci.SetEvent("test_event", 30);
 

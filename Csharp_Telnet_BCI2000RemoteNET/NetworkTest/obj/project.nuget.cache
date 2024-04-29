@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JQyPRWrb5IaiyuhasxruCRxO7aOCK8ycSX7ofFcAbs0IvGuSY4uMxymfK0akGCVtZV8cVD7iZw1uUYrlif71bA==",
+  "dgSpecHash": "kM8520NkS4X7Wd/I2nNSoqckWyMPO8i6eajelpra9SUuOAq5kZ+w4aITOvCTCyQc/H/xN8YNjfCm+rGeANTuiA==",
   "success": true,
-  "projectFilePath": "D:\\Users\\swift\\Documents\\GitHub\\ExperimentalDesignDemos\\Csharp_Telnet_BCI2000RemoteNET\\NetworkTest\\NetworkTest.csproj",
+  "projectFilePath": "/Users/jamesswift/Documents/git/ExperimentalDesignDemos/Csharp_Telnet_BCI2000RemoteNET/NetworkTest/NetworkTest.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

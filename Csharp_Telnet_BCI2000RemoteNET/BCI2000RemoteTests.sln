@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicSignalTest", "BasicSig
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetworkTest", "NetworkTest\NetworkTest.csproj", "{45564B9C-83EA-4AC1-A979-D93456CE6CDE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventSender", "EventSender\EventSender.csproj", "{A691A92F-01A9-405C-8A59-5C86CBE566DB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{45564B9C-83EA-4AC1-A979-D93456CE6CDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45564B9C-83EA-4AC1-A979-D93456CE6CDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45564B9C-83EA-4AC1-A979-D93456CE6CDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A691A92F-01A9-405C-8A59-5C86CBE566DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A691A92F-01A9-405C-8A59-5C86CBE566DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A691A92F-01A9-405C-8A59-5C86CBE566DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A691A92F-01A9-405C-8A59-5C86CBE566DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
