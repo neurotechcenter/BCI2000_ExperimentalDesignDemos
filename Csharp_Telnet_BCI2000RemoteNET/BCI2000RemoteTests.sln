@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RemoteTest", "RemoteTest\RemoteTest.csproj", "{8D6F64D8-B124-4EFA-BB80-47344E1B46D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BasicEventTest", "BasicEventTest\BasicEventTest.csproj", "{8D6F64D8-B124-4EFA-BB80-47344E1B46D8}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventLatencyTest", "EventLatencyTest\EventLatencyTest.csproj", "{E827F4EB-3E1B-49E9-96C1-9AA365FC0711}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicSignalTest", "BasicSignalTest\BasicSignalTest.csproj", "{3FB13BD0-43ED-43C5-839F-573724534932}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BasicSignalTest", "BasicSignalTest\BasicSignalTest.csproj", "{3FB13BD0-43ED-43C5-839F-573724534932}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetworkTest", "NetworkTest\NetworkTest.csproj", "{45564B9C-83EA-4AC1-A979-D93456CE6CDE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetworkStartBCI2000", "NetworkStartBCI2000\NetworkStartBCI2000.csproj", "{45564B9C-83EA-4AC1-A979-D93456CE6CDE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventSender", "EventSender\EventSender.csproj", "{A691A92F-01A9-405C-8A59-5C86CBE566DB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetworkEventSender", "NetworkEventSender\NetworkEventSender.csproj", "{A691A92F-01A9-405C-8A59-5C86CBE566DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicParameters", "BasicParameters\BasicParameters.csproj", "{D3DB8733-CF75-4B35-833C-C30AD86638B8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{A691A92F-01A9-405C-8A59-5C86CBE566DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A691A92F-01A9-405C-8A59-5C86CBE566DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A691A92F-01A9-405C-8A59-5C86CBE566DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3DB8733-CF75-4B35-833C-C30AD86638B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3DB8733-CF75-4B35-833C-C30AD86638B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3DB8733-CF75-4B35-833C-C30AD86638B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3DB8733-CF75-4B35-833C-C30AD86638B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

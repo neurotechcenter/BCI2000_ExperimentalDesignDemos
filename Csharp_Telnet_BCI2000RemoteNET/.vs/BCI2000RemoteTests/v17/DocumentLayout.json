@@ -1,18 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\James\\Desktop\\RemoteTest\\",
+  "WorkspaceRootPath": "D:\\Users\\swift\\Documents\\GitHub\\ExperimentalDesignDemos\\Csharp_Telnet_BCI2000RemoteNET\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{45564B9C-83EA-4AC1-A979-D93456CE6CDE}|NetworkTest\\NetworkTest.csproj|c:\\users\\james\\desktop\\remotetest\\networktest\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45564B9C-83EA-4AC1-A979-D93456CE6CDE}|NetworkTest\\NetworkTest.csproj|solutionrelative:networktest\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8D6F64D8-B124-4EFA-BB80-47344E1B46D8}|BasicEventTest\\BasicEventTest.csproj|d:\\users\\swift\\documents\\github\\experimentaldesigndemos\\csharp_telnet_bci2000remotenet\\basiceventtest\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D6F64D8-B124-4EFA-BB80-47344E1B46D8}|BasicEventTest\\BasicEventTest.csproj|solutionrelative:basiceventtest\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8D6F64D8-B124-4EFA-BB80-47344E1B46D8}|RemoteTest\\RemoteTest.csproj|c:\\users\\james\\desktop\\remotetest\\remotetest\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D6F64D8-B124-4EFA-BB80-47344E1B46D8}|RemoteTest\\RemoteTest.csproj|solutionrelative:remotetest\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D3DB8733-CF75-4B35-833C-C30AD86638B8}|BasicParameters\\BasicParameters.csproj|d:\\users\\swift\\documents\\github\\experimentaldesigndemos\\csharp_telnet_bci2000remotenet\\basicparameters\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3DB8733-CF75-4B35-833C-C30AD86638B8}|BasicParameters\\BasicParameters.csproj|solutionrelative:basicparameters\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{45564B9C-83EA-4AC1-A979-D93456CE6CDE}|NetworkTest\\NetworkTest.csproj|c:\\users\\james\\desktop\\remotetest\\networktest\\networktest.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{45564B9C-83EA-4AC1-A979-D93456CE6CDE}|NetworkTest\\NetworkTest.csproj|solutionrelative:networktest\\networktest.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Users\\swift\\Documents\\GitHub\\BCI2000RemoteNET\\BCI2000Connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -28,39 +27,40 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\James\\Desktop\\RemoteTest\\RemoteTest\\Program.cs",
-              "RelativeDocumentMoniker": "RemoteTest\\Program.cs",
-              "ToolTip": "C:\\Users\\James\\Desktop\\RemoteTest\\RemoteTest\\Program.cs",
-              "RelativeToolTip": "RemoteTest\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
+              "DocumentMoniker": "D:\\Users\\swift\\Documents\\GitHub\\ExperimentalDesignDemos\\Csharp_Telnet_BCI2000RemoteNET\\BasicParameters\\Program.cs",
+              "RelativeDocumentMoniker": "BasicParameters\\Program.cs",
+              "ToolTip": "D:\\Users\\swift\\Documents\\GitHub\\ExperimentalDesignDemos\\Csharp_Telnet_BCI2000RemoteNET\\BasicParameters\\Program.cs",
+              "RelativeToolTip": "BasicParameters\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T17:36:50.105Z",
+              "WhenOpened": "2024-05-25T00:20:18.507Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\James\\Desktop\\RemoteTest\\NetworkTest\\Program.cs",
-              "RelativeDocumentMoniker": "NetworkTest\\Program.cs",
-              "ToolTip": "C:\\Users\\James\\Desktop\\RemoteTest\\NetworkTest\\Program.cs",
-              "RelativeToolTip": "NetworkTest\\Program.cs",
-              "ViewState": "AQIAABYAAAAAMzMzMzMLwCcAAAAdAAAA",
+              "DocumentMoniker": "D:\\Users\\swift\\Documents\\GitHub\\ExperimentalDesignDemos\\Csharp_Telnet_BCI2000RemoteNET\\BasicEventTest\\Program.cs",
+              "RelativeDocumentMoniker": "BasicEventTest\\Program.cs",
+              "ToolTip": "D:\\Users\\swift\\Documents\\GitHub\\ExperimentalDesignDemos\\Csharp_Telnet_BCI2000RemoteNET\\BasicEventTest\\Program.cs",
+              "RelativeToolTip": "BasicEventTest\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T15:54:02.854Z",
+              "WhenOpened": "2024-05-25T00:17:10.83Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "NetworkTest.csproj",
-              "DocumentMoniker": "C:\\Users\\James\\Desktop\\RemoteTest\\NetworkTest\\NetworkTest.csproj",
-              "RelativeDocumentMoniker": "NetworkTest\\NetworkTest.csproj",
-              "ToolTip": "C:\\Users\\James\\Desktop\\RemoteTest\\NetworkTest\\NetworkTest.csproj",
-              "RelativeToolTip": "NetworkTest\\NetworkTest.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-04-24T15:53:50.653Z"
+              "Title": "BCI2000Connection.cs",
+              "DocumentMoniker": "D:\\Users\\swift\\Documents\\GitHub\\BCI2000RemoteNET\\BCI2000Connection.cs",
+              "RelativeDocumentMoniker": "..\\..\\BCI2000RemoteNET\\BCI2000Connection.cs",
+              "ToolTip": "D:\\Users\\swift\\Documents\\GitHub\\BCI2000RemoteNET\\BCI2000Connection.cs",
+              "RelativeToolTip": "..\\..\\BCI2000RemoteNET\\BCI2000Connection.cs",
+              "ViewState": "AQIAAIQAAAAAAAAAAAAewKgAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T00:18:12.167Z",
+              "EditorCaption": ""
             }
           ]
         }
