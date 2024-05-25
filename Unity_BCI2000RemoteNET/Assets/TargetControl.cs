@@ -5,14 +5,14 @@ using UnityEngine;
 
 public class TargetControl : MonoBehaviour
 {
+    //ADD BCI2000 REFERENCE HERE
+    private UnityBCI2000 bci;
     GameObject t1;
     GameObject t2;
     GameObject t3;
     GameObject t4;
 
-    string SubjName;
-
-    const int TIME = 200;
+    const int TIME = 600;
     int framecount = 0;
 
     System.Random rng = new System.Random();
@@ -21,44 +21,48 @@ public class TargetControl : MonoBehaviour
 
     bool[] targetCol = new bool[4];
 
+    string BCI2000SamplingRate;
+
     public void SetTargetCol(bool[] targetCols)
     {
         targetCol = targetCols;
     }
 
-    // BCI2000
-    UnityBCI2000 bci;
-
     void Awake()
     {
-        // SET BCI2000 REFERENCE HERE
+        //SET BCI2000 REFERENCE
         bci = GameObject.Find("BCI2000").GetComponent<UnityBCI2000>();
 
-        // BCI2000 Add Parameters
-        bci.AddParam("Application:SubField", "NewParam", "DefaultValue", "minValue", "maxValue");
+        bci.OnIdle(bci =>
+        {
+            bci.AddEvent("t1hit", 1); // eventName, bitWidth
+            bci.AddEvent("t2hit", 1);
+            bci.AddEvent("t3hit", 1);
+            bci.AddEvent("t4hit", 1);
 
-        // BCI2000 Set Parameters
-        bci.SetParam("SubjectName", "TestSubject");
-        bci.SetParam("SamplingRate",    "1000");
-        bci.SetParam("SampleBlockSize", "50");
+            // BCI2000 create new parameter
+            bci.AddParameter("Visualize:Timing", "ExampleParam", "4"); // Tab:Field, ParamName, ParamValue            
+        });
 
-        // BCI2000 Add Events
-        bci.AddEvent("t1hit");
-        bci.AddEvent("t2hit");
-        bci.AddEvent("t3hit");
-        bci.AddEvent("t4hit");
+        bci.OnConnected(bci =>
+        {
+            // BCI2000 add event watches
+            bci.Visualize("t1hit"); // eventName
+            bci.Visualize("t2hit");
+            bci.Visualize("t3hit");
+            bci.Visualize("t4hit");
 
-        // Add BCI2000 event watches
-        bci.ExecuteCommand("visualize watch t1hit");
-        bci.ExecuteCommand("visualize watch t2hit");
-        bci.ExecuteCommand("visualize watch t3hit");
-        bci.ExecuteCommand("visualize watch t4hit");
-        
-        // Change log level to avoid continuously printing event changes to
-        // operator log
-        bci.ExecuteCommand("Set variable LogLevel 0");
+            // BCI2000 set parameter
+            bci.SetParameter("SubjectName", "UnitySubject"); // paramName, paramValue
+
+            // BCI2000 get parameter
+            BCI2000SamplingRate = bci.GetParameter("SamplingRate"); // paramName
+            Debug.Log("BCI2000 Sampling Rate: " + BCI2000SamplingRate);
+        });
+
     }
 
+    // Start is called before the first frame update
     void Start()
     {
         t1 = GameObject.Find("Target1");
@@ -71,9 +75,13 @@ public class TargetControl : MonoBehaviour
         t3.SetActive(false);
         t4.SetActive(false);
 
-        // BCI2000 Get Parameters
-        //SubjName = bci.GetParam("SubjectName");
-        //Debug.Log(SubjName);
+        bci.OnConnected(bci => 
+        {
+            // Execute can be used for any operator scripting command
+            // BCI2000 change log level to avoid continuously 
+            // printing event changes to operator log
+            bci.connection.Execute("set variable LogLevel 0");
+        });
     }
 
     // Update is called once per frame
@@ -113,44 +121,37 @@ public class TargetControl : MonoBehaviour
         {
             if (t1.activeSelf && targetCol[0])
             {
-                // BCI2000 SET T1HIT HERE
-                bci.SetEvent("t1hit", 1);
-
+                // BCI2000 Set t1 event
+                bci.Control.SetEvent("t1hit", 1); // eventName, eventValue (must be uint)
                 t1.SetActive(false);
                 targetActive = false;
-            }
-            else if (t2.activeSelf && targetCol[1])
+            } else if (t2.activeSelf && targetCol[1])
             {
-                // BCI2000 SET T2HIT HERE
-                bci.SetEvent("t2hit", 1);
-
+                // BCI2000 Set t2 event
+                bci.Control.SetEvent("t2hit", 1);
                 t2.SetActive(false);
                 targetActive = false;
-            }
-            else if (t3.activeSelf && targetCol[2])
+            } else if (t3.activeSelf && targetCol[2])
             {
-                // BCI2000 SET T3HIT HERE
-                bci.SetEvent("t3hit", 1);
-
+                // BCI2000 Set t3 event
+                bci.Control.SetEvent("t3hit", 1);
                 t3.SetActive(false);
                 targetActive = false;
-            }
-            else if (t4.activeSelf && targetCol[3])
+            } else if (t4.activeSelf && targetCol[3])
             {
-                // BCI2000 SET T4HIT HERE
-                bci.SetEvent("t4hit", 1);
-
+                // BCI2000 Set t4 event
+                bci.Control.SetEvent("t4hit", 1);
                 t4.SetActive(false);
                 targetActive = false;
             }
         }
         else
         {
-            // BCI2000 Target VALUES TO 0 HERE
-            bci.SetEvent("t1hit", 0);
-            bci.SetEvent("t2hit", 0);
-            bci.SetEvent("t3hit", 0);
-            bci.SetEvent("t4hit", 0);
+            // BCI2000 set target events to 0 here
+            bci.Control.SetEvent("t1hit", 0);
+            bci.Control.SetEvent("t2hit", 0);
+            bci.Control.SetEvent("t3hit", 0);
+            bci.Control.SetEvent("t4hit", 0);
         }
     }
 }

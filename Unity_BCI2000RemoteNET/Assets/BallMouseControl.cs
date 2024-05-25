@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class SphereBehavior : MonoBehaviour
 {
-    private TargetControl tc;
-    // Start is called before the first frame update
+    //ADD BCI2000 REFERENCE HERE
+    private UnityBCI2000 bci;
 
-    public int MAX_X     = 2256;
-    public int MAX_Y     = 1504;
+    private TargetControl tc;
+
+    public int MAX_X = 2256;
+    public int MAX_Y = 1504;
     private int X_OFFSET = 32768;
     private int Y_OFFSET = 32768;
 
-    private double X_MIN   = -4.3;
-    private double Y_MIN   = 0.5;
+    private double X_MIN = -4.3;
+    private double Y_MIN = 0.5;
     private double X_RANGE = 8.8;
     private double Y_RANGE = 8.5;
 
@@ -22,50 +24,54 @@ public class SphereBehavior : MonoBehaviour
     bool t3hit;
     bool t4hit;
 
-    private float Mpx  = 0;
-    private float Mpy  = 0;
+    private float Mpx = 0;
+    private float Mpy = 0;
     private float Mpxc = 0;
     private float Mpyc = 0;
-
-    // BCI2000
-    UnityBCI2000 bci;
-
+    
     void Awake()
     {
-        //SET BCI2000 REFERENCE AND ADD EVENTS HERE
+        // SET BCI2000 REFERENCE
         bci = GameObject.Find("BCI2000").GetComponent<UnityBCI2000>();
+        tc  = GameObject.Find("TargetControl").GetComponent<TargetControl>();
 
-        // BCI2000 Add Events
-        bci.AddEvent("PositionX");
-        bci.AddEvent("PositionY");
+        bci.OnIdle(bci =>
+        {
+            // BCI2000 add events
+            bci.AddEvent("PositionX",32); // eventName, bitWidth
+            bci.AddEvent("PositionY",32);
+        });
 
-        // Add BCI2000 event watches
-        bci.ExecuteCommand("visualize watch MousePosX");
-        bci.ExecuteCommand("visualize watch PositionX");
-        bci.ExecuteCommand("visualize watch MousePosY");
-        bci.ExecuteCommand("visualize watch PositionY");
+        bci.OnConnected(bci =>
+        {
+            // BCI2000 add event watches
+            bci.Visualize("MousePosX"); // eventName
+            bci.Visualize("PositionX");
+            bci.Visualize("MousePosY");
+            bci.Visualize("PositionY");
+        });
     }
 
+    // Start is called before the first frame update
     void Start()
     {
-        tc = GameObject.Find("TargetControl").GetComponent<TargetControl>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        // BCI2000 RECEIVE EVENTS HERE
-        Mpx = bci.GetEvent("MousePosX");
-        Mpy = bci.GetEvent("MousePosY");
+        // Get mouse position event for unity cursor control
+        Mpx = bci.Control.GetEvent("MousePosX"); // eventName
+        Mpy = bci.Control.GetEvent("MousePosY");
 
         Mpxc = (float) (((  Mpx - X_OFFSET) / MAX_X)            * X_RANGE + X_MIN);
         Mpyc = (float) (((((Mpy - Y_OFFSET) / MAX_Y) * -1) + 1) * Y_RANGE + Y_MIN);
 
         transform.position = new Vector3(Mpxc, Mpyc, 0.63f);
 
-        // BCI2000 SET POSITION EVENTS HERE
-        bci.SetEvent("PositionX", (int)(transform.position.x + 10 * 1000));
-        bci.SetEvent("PositionY", (int)(transform.position.y      * 1000));
+        // BCI2000 set position events here
+        bci.Control.SetEvent("PositionX", (uint)((transform.position.x + 10) * 1000)); // eventName, eventValue (must be uint)
+        bci.Control.SetEvent("PositionY", (uint)( transform.position.y       * 1000));
 
         var x = transform.position.x;
         var y = transform.position.y;

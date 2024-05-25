@@ -5,18 +5,18 @@ using UnityEngine;
 
 public class SphereSignalBehaviour : MonoBehaviour
 {
-    // BCI2000 Reference
-    UnityBCI2000 bci;
+    private UnityBCI2000 bci;
 
     private TargetControl tc;
+    // Start is called before the first frame update
 
-    private int MAX_X    = 100;
-    private int MAX_Y    = 100;
+    private int MAX_X = 100;
+    private int MAX_Y = 100;
     private int X_OFFSET = 0;
     private int Y_OFFSET = 0;
-    
-    private double X_MIN   = -4.3;
-    private double Y_MIN   = 0.5;
+
+    private double X_MIN = -4.3;
+    private double Y_MIN = 0.5;
     private double X_RANGE = 8.8;
     private double Y_RANGE = 8.5;
 
@@ -43,24 +43,14 @@ public class SphereSignalBehaviour : MonoBehaviour
     [SerializeField]
     double Mpyc = 0;
 
-    void Awake()
+    void Awake() 
     {
-        //SET BCI2000 REFERENCE HERE
         bci = GameObject.Find("BCI2000").GetComponent<UnityBCI2000>();
-
-        // BCI2000 Add Events
-        bci.AddEvent("PositionX", 32);
-        bci.AddEvent("PositionY", 32);
-
-        // Add BCI2000 event watches
-        bci.ExecuteCommand("visualize watch PositionX");
-        bci.ExecuteCommand("visualize watch PositionY");
+        tc = GameObject.Find("TargetControl").GetComponent<TargetControl>();
     }
 
     void Start()
     {
-        tc = GameObject.Find("TargetControl").GetComponent<TargetControl>();
-
         for (int i = 0; i < AverageFrames; i++)
         {
             pastValsX.Enqueue(0);
@@ -71,13 +61,11 @@ public class SphereSignalBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // BCI2000 Get Signal 1 
         pastValsX.Dequeue();
-        pastValsX.Enqueue(bci.GetSignal(1,1));
+        pastValsX.Enqueue(bci.Control.GetSignal(1, 1));
 
-        // BCI2000 Get Signal 2
         pastValsY.Dequeue();
-        pastValsY.Enqueue(bci.GetSignal(2,1));
+        pastValsY.Enqueue(bci.Control.GetSignal(2, 1));
 
         Mpx = pastValsX.Max();
         Mpy = pastValsY.Max();
@@ -87,9 +75,6 @@ public class SphereSignalBehaviour : MonoBehaviour
 
         transform.position = new Vector3((float) Mpxc, (float) Mpyc, 0.63f);
 
-        // BCI2000 SET POSITION EVENTS HERE
-        bci.SetEvent("PositionX", (int)(transform.position.x + 10 * 1000));
-        bci.SetEvent("PositionY", (int)(transform.position.y      * 1000));
 
         var x = transform.position.x;
         var y = transform.position.y;
