@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 using UnityEngine;
+using static System.Net.Mime.MediaTypeNames;
 
 public class TargetControl : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class TargetControl : MonoBehaviour
     GameObject t3;
     GameObject t4;
 
-    const int TIME = 600;
+    const int TIME = 200;
     int framecount = 0;
 
     System.Random rng = new System.Random();
@@ -53,7 +54,9 @@ public class TargetControl : MonoBehaviour
             bci.Visualize("t4hit");
 
             // BCI2000 set parameter
-            bci.SetParameter("SubjectName", "UnitySubject"); // paramName, paramValue
+            //bci.SetParameter("SubjectName",     "UnitySubject"); // paramName, paramValue
+            //bci.SetParameter("SamplingRate",    "200");         // paramName, paramValue
+            //bci.SetParameter("SampleBlockSize", "10");         // paramName, paramValue
 
             // BCI2000 get parameter
             BCI2000SamplingRate = bci.GetParameter("SamplingRate"); // paramName
@@ -153,5 +156,8 @@ public class TargetControl : MonoBehaviour
             bci.Control.SetEvent("t3hit", 0);
             bci.Control.SetEvent("t4hit", 0);
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+            UnityEngine.Application.Quit();
     }
 }
