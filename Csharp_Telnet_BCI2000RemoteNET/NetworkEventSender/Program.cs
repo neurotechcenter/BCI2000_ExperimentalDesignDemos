@@ -36,7 +36,7 @@ bciConnection.Connect(address: targetIP, port: targetPort);
 bciRemote.SetParameter("SamplingRate", "1000");
 bciRemote.SetParameter("SampleBlockSize", "50");
 
-bciRemote.Visualize("test_event");
+//bciRemote.Visualize("test_event");
 
 Console.WriteLine("Waiting for BCI2000 to start...");
 bciRemote.WaitForSystemState(BCI2000Remote.SystemState.Running);

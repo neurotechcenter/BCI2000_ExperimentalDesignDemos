@@ -28,7 +28,7 @@ PingReply reply = pingSender.Send(targetIP);
 Console.WriteLine(reply.Status.ToString());
 
 // Connect to BCI2000 Operator
-bciConnection.Connect();
+bciConnection.Connect(address: targetIP, port: targetPort);
 
 bciRemote.AddEvent("test_event", 32, 5); // event name, bit width, initial value
 
@@ -51,8 +51,8 @@ bciRemote.Start();
 
 bciRemote.SetEvent("test_event", 30);
 
-//Thread.Sleep(1000);
-//Console.WriteLine("event return value: " + bci.GetEvent("test_event"));
+Thread.Sleep(1000);
+Console.WriteLine("event return value: " + bciRemote.GetEvent("test_event"));
 
 
 while (true) {
@@ -60,7 +60,14 @@ while (true) {
     bciRemote.SetEvent("test_event", 10);
     Thread.Sleep(1000);
 
+
+    Console.WriteLine("event return value: " + bciRemote.GetEvent("test_event"));
+
+
     Console.WriteLine("Setting event to 15");
     bciRemote.SetEvent("test_event", 15);
     Thread.Sleep(1000);
+
+    Console.WriteLine("event return value: " + bciRemote.GetEvent("test_event"));
+
 }
