@@ -156,9 +156,12 @@ public class UnityBCI2000 : MonoBehaviour {
 	if (StartModules) {
 	    StartupModules();
 	    control.WaitForSystemState(BCI2000Remote.SystemState.Connected);
+<<<<<<< HEAD
 	}
 	foreach(string file in ParameterFiles) {
 	    control.LoadParameters(file);
+=======
+>>>>>>> 2255e101f6baf7f3c98d66595bdce5804acad365
 	}
 	foreach(Action<BCI2000Remote> action in onConnected) {
 	    action(control);

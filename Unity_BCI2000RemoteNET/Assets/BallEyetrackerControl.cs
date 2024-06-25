@@ -9,15 +9,21 @@ public class BallEyetrackerControl : MonoBehaviour
     private TargetControl tc;
     // Start is called before the first frame update
 
-    public int MAX_X = 65535;
-    public int MAX_Y = 65535;
-    public int X_OFFSET = 0;
-    public int Y_OFFSET = 0;
+    private int bci2000_xmin; // bci2000 cursor offset 2^15
+    private int bci2000_xmax; // bci2000 offset + display resolution x
+    private int bci2000_ymin; // bci2000 cursor offset 2^15
+    private int bci2000_ymax; // bci2000 offset + display resolution y
 
-    private double X_MIN = -4.3;
-    private double Y_MIN = 0.5;
-    private double X_RANGE = 8.8;
-    private double Y_RANGE = 8.5;
+    private double TopTargetY;    // Target positions for scaling
+    private double RightTargetX;
+    private double BottomTargetY;
+    private double LeftTargetX;
+
+    private double unity_xrange;  // distance between x targets
+    private double unity_yrange;  // distance between y targets
+    private double unity_xoffset; // left target
+    private double unity_yoffset; // bottom target
+
 
     bool t1hit;
     bool t2hit;
@@ -41,6 +47,20 @@ public class BallEyetrackerControl : MonoBehaviour
 
     void Start()
     {
+        bci2000_xmin = 32768;
+        bci2000_xmax = bci2000_xmin + Screen.currentResolution.width;
+        bci2000_ymin = 32768;
+        bci2000_ymax = bci2000_ymin + Screen.currentResolution.height;
+
+        TopTargetY = GameObject.Find("Target1").transform.position.y;
+        RightTargetX = GameObject.Find("Target2").transform.position.x;
+        BottomTargetY = GameObject.Find("Target3").transform.position.y;
+        LeftTargetX = GameObject.Find("Target4").transform.position.x;
+
+        unity_xrange = RightTargetX - LeftTargetX;
+        unity_yrange = TopTargetY - BottomTargetY;
+        unity_xoffset = LeftTargetX;
+        unity_yoffset = BottomTargetY;
     }
 
     // Update is called once per frame
@@ -49,8 +69,8 @@ public class BallEyetrackerControl : MonoBehaviour
         Mpx = bci.Control.GetEvent("EyetrackerLeftEyeGazeX");
         Mpy = bci.Control.GetEvent("EyetrackerLeftEyeGazeY");
 
-        Mpxc = (float) (((Mpx - X_OFFSET) / MAX_X) * X_RANGE + X_MIN);
-        Mpyc = (float) (((((Mpy - Y_OFFSET) / MAX_Y) * -1) + 1) * Y_RANGE + Y_MIN);
+        Mpxc = (float)((Mpx - bci2000_xmin) / (bci2000_xmax - bci2000_xmin) * unity_xrange + unity_xoffset);
+        Mpyc = (float)((-1 * (Mpy - bci2000_ymin) / (bci2000_ymax - bci2000_ymin) + 1) * unity_yrange + unity_yoffset);
 
         transform.position = new Vector3(Mpxc, Mpyc, 0.63f);
 

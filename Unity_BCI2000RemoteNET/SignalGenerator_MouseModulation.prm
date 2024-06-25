@@ -1,0 +1,15 @@
+Source:SignalGeneratorADC int ModulateAmplitude= 1 0 0 1 // Modulate the amplitude with the mouse (0=no, 1=yes) (boolean)
+Source:SignalGeneratorADC int SineChannelX= 1 0 0 % // Channel number of sinewave controlled by mouse x position
+Source:SignalGeneratorADC int SineChannelY= 2 0 0 % // Channel number of sinewave controlled by mouse y position (0 for all)
+Source:SignalGeneratorADC int SineChannelZ= 3 0 0 % // Channel number of sinewave controlled by mouse key state
+Source:SignalGeneratorADC list NaNChannels= 1 auto // Channel numbers set to NaN if space is pressed (empty if not used)
+Source:SignalGeneratorADC float SineFrequency= 10Hz 10Hz % % // Frequency of sine wave
+Source:SignalGeneratorADC int SineAmplitude= 100muV 100muV % % // Amplitude of sine wave
+Source:SignalGeneratorADC int NoiseAmplitude= 30muV 30muV % % // Amplitude of white noise (common to all channels)
+Source:SignalGeneratorADC int DCOffset= 0muV 0muV % % // DC offset (common to all channels)
+Source:SignalGeneratorADC string AmplitudeMultiplier= 1 1 % % // Expression to multiply amplitude by
+Source:SignalGeneratorADC string OffsetMultiplier= % StimulusType % % // Expression to multiply offset by
+Source:SignalGeneratorADC int SignalType= 0 0 0 2 // numeric type of output signal:  0: int16, 1: float32, 2: int32 (enumeration)
+Source:SignalGeneratorADC matrix SourceProperties= 0 { Frequency Amplitude } // Source properties
+Source:SignalGeneratorADC matrix MixingMatrix= 0 1 // Source-to-sensor projection, rows are sources, columns are sensors
+Source:SignalGeneratorADC float VariateTiming= 0 0 0 0.9 // Introduce random variation into block duration
