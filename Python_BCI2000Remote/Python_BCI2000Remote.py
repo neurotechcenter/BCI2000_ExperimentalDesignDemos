@@ -24,7 +24,7 @@ bci.Connect()
 bci.Execute('cd ${BCI2000LAUNCHDIR}')
 
 # Set log level to 0
-bci.Execute('Set LogLevel 0')
+# bci.Execute('Set LogLevel 0')
 
 # Create new event to capture stimulus code (must be done before startup)
 # Events are set asynchronously from block time, at the current sample

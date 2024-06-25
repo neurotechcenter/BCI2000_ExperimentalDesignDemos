@@ -20,7 +20,7 @@ if not(libisloaded('bci'))
 end 
 libfunctions('bci')
 
-%%
+%% Set operator path
 bciHandle = calllib('bci', 'BCI2000Remote_New');
 calllib('bci', 'BCI2000Remote_SetOperatorPath', bciHandle, fullfile(BCI2000root,'prog','Operator'));
 
@@ -39,7 +39,7 @@ calllib('bci', 'BCI2000Remote_Execute', bciHandle,'Reset system', 0);
 % Create new parameter (must be done before startup)
 calllib('bci', 'BCI2000Remote_Execute', bciHandle, 'Add Parameter Application:TestParameterField string TestParameter= FirstNewParameter % % %', 0); 
 
-% Define S tates
+% Define States
 % Define new state with 2 bytes of information (2 colors)
 calllib('bci', 'BCI2000Remote_Execute', bciHandle, 'add event Square 2 0', 0);
 
@@ -50,7 +50,7 @@ calllib('bci', 'BCI2000Remote_Execute', bciHandle,'Startup system localhost', 0)
 calllib('bci', 'BCI2000Remote_SetWindowVisible', bciHandle, 1);
 
 % Set log level to 0
-calllib('bci', 'BCI2000Remote_Execute', bciHandle, 'Set LogLevel 0', 0);
+% calllib('bci', 'BCI2000Remote_Execute', bciHandle, 'Set LogLevel 0', 0);
 
 %% Establish connection to three modules
 SourceModule = 'SignalGenerator';
