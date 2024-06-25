@@ -7,7 +7,6 @@ public class TargetControl : MonoBehaviour
 {
     //ADD BCI2000 REFERENCE HERE
     private UnityBCI2000 bci;
-    
     GameObject t1;
     GameObject t2;
     GameObject t3;
@@ -60,7 +59,6 @@ public class TargetControl : MonoBehaviour
             BCI2000SamplingRate = bci.GetParameter("SamplingRate"); // paramName
             Debug.Log("BCI2000 Sampling Rate: " + BCI2000SamplingRate);
         });
-
     }
 
     // Start is called before the first frame update
@@ -116,31 +114,24 @@ public class TargetControl : MonoBehaviour
             {
                 // BCI2000 Set t1 event
                 bci.Control.SetEvent("t1hit", 1); // eventName, eventValue (must be uint)
-
-                // Can be used to write strings to the Notes event
-                //bci.Control.connection.Execute("PUT NOTE t1hit");
-
                 t1.SetActive(false);
                 targetActive = false;
             } else if (t2.activeSelf && targetCol[1])
             {
                 // BCI2000 Set t2 event
                 bci.Control.SetEvent("t2hit", 1);
-
                 t2.SetActive(false);
                 targetActive = false;
             } else if (t3.activeSelf && targetCol[2])
             {
                 // BCI2000 Set t3 event
                 bci.Control.SetEvent("t3hit", 1);
-
                 t3.SetActive(false);
                 targetActive = false;
             } else if (t4.activeSelf && targetCol[3])
             {
                 // BCI2000 Set t4 event
                 bci.Control.SetEvent("t4hit", 1);
-
                 t4.SetActive(false);
                 targetActive = false;
             }

@@ -622,9 +622,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6448ca6d48dd0c448ff1f44a26eceaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartLocalOperator: 1
-  OperatorPath: C:\bci2000.x64\prog\Operator.exe
-  OperatorAddress: 127.0.0.1
+  StartLocalOperator: 0
+  OperatorPath: 
+  OperatorAddress: 192.168.42.128
   OperatorPort: 3999
   ConnectTimeout: 1000
   StartModules: 1
@@ -632,7 +632,7 @@ MonoBehaviour:
   StopWithScene: 1
   ShutdownWithScene: 1
   ParameterFiles:
-  - C:\bci2000.x64\parms\examples\CursorTask_Unity.prm
+  - C:\bci2000.x64_dev\parms\examples\CursorTask_Unity.prm
   Module1: SignalGenerator
   Module1Args:
   - LogMouse=1
