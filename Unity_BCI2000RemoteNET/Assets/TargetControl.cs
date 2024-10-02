@@ -8,6 +8,7 @@ public class TargetControl : MonoBehaviour
 {
     //ADD BCI2000 REFERENCE HERE
     private UnityBCI2000 bci;
+    
     GameObject t1;
     GameObject t2;
     GameObject t3;
@@ -80,7 +81,10 @@ public class TargetControl : MonoBehaviour
         t2.SetActive(false);
         t3.SetActive(false);
         t4.SetActive(false);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6cd8fda5fc89e87428191f4287ad6fae25c863ea
     }
 
     // Update is called once per frame
@@ -121,26 +125,37 @@ public class TargetControl : MonoBehaviour
             if (t1.activeSelf && targetCol[0])
             {
                 // BCI2000 Set t1 event
+<<<<<<< HEAD
                 // eventName, eventValue (must be uint)
                 bci.Control.SetEvent("t1hit", 1); 
+=======
+                bci.Control.SetEvent("t1hit", 1); // eventName, eventValue (must be uint)
+
+                // Can be used to write strings to the Notes event
+                //bci.Control.connection.Execute("PUT NOTE t1hit");
+
+>>>>>>> 6cd8fda5fc89e87428191f4287ad6fae25c863ea
                 t1.SetActive(false);
                 targetActive = false;
             } else if (t2.activeSelf && targetCol[1])
             {
                 // BCI2000 Set t2 event
                 bci.Control.SetEvent("t2hit", 1);
+
                 t2.SetActive(false);
                 targetActive = false;
             } else if (t3.activeSelf && targetCol[2])
             {
                 // BCI2000 Set t3 event
                 bci.Control.SetEvent("t3hit", 1);
+
                 t3.SetActive(false);
                 targetActive = false;
             } else if (t4.activeSelf && targetCol[3])
             {
                 // BCI2000 Set t4 event
                 bci.Control.SetEvent("t4hit", 1);
+
                 t4.SetActive(false);
                 targetActive = false;
             }

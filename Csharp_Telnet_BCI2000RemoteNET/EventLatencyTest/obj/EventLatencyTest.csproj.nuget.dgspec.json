@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "D:\\Users\\swift\\Documents\\GitHub\\BCI2000_ExperimentalDesignDemos\\Csharp_Telnet_BCI2000RemoteNET\\EventLatencyTest\\EventLatencyTest.csproj": {}
   },
   "projects": {
@@ -12,16 +13,28 @@
         "projectPath": "D:\\Users\\swift\\Documents\\GitHub\\BCI2000_ExperimentalDesignDemos\\Csharp_Telnet_BCI2000RemoteNET\\EventLatencyTest\\EventLatencyTest.csproj",
         "packagesPath": "C:\\Users\\swift\\.nuget\\packages\\",
         "outputPath": "D:\\Users\\swift\\Documents\\GitHub\\BCI2000_ExperimentalDesignDemos\\Csharp_Telnet_BCI2000RemoteNET\\EventLatencyTest\\obj\\",
+=======
+    "/Users/jamesswift/Documents/git/BCI2000_ExperimentalDesignDemos/Csharp_Telnet_BCI2000RemoteNET/EventLatencyTest/EventLatencyTest.csproj": {}
+  },
+  "projects": {
+    "/Users/jamesswift/Documents/git/BCI2000_ExperimentalDesignDemos/Csharp_Telnet_BCI2000RemoteNET/EventLatencyTest/EventLatencyTest.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/jamesswift/Documents/git/BCI2000_ExperimentalDesignDemos/Csharp_Telnet_BCI2000RemoteNET/EventLatencyTest/EventLatencyTest.csproj",
+        "projectName": "EventLatencyTest",
+        "projectPath": "/Users/jamesswift/Documents/git/BCI2000_ExperimentalDesignDemos/Csharp_Telnet_BCI2000RemoteNET/EventLatencyTest/EventLatencyTest.csproj",
+        "packagesPath": "/Users/jamesswift/.nuget/packages/",
+        "outputPath": "/Users/jamesswift/Documents/git/BCI2000_ExperimentalDesignDemos/Csharp_Telnet_BCI2000RemoteNET/EventLatencyTest/obj/",
+>>>>>>> 6cd8fda5fc89e87428191f4287ad6fae25c863ea
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\swift\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/jamesswift/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "/usr/local/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -60,7 +73,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

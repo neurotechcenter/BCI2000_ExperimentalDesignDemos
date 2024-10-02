@@ -1,36 +1,31 @@
-﻿<Properties StartupConfiguration="{8D6F64D8-B124-4EFA-BB80-47344E1B46D8}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="NetworkTest/Program.cs">
-    <Files>
-      <File FileName="NetworkTest/Program.cs" Line="1" Column="1" />
-    </Files>
+﻿<Properties StartupConfiguration="{A691A92F-01A9-405C-8A59-5C86CBE566DB}|Default">
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="BCI2000RemoteTests" expanded="True">
-            <Node name="BasicSignalTest" expanded="True" />
-            <Node name="EventLatencyTest" expanded="True">
-              <Node name="Dependencies" expanded="True">
-                <Node name="AssemblyDependencies" expanded="True" />
-                <Node name="FrameworkReferences" expanded="True" />
-              </Node>
-            </Node>
-            <Node name="NetworkTest" expanded="True">
-              <Node name="Dependencies" expanded="True">
-                <Node name="AssemblyDependencies" expanded="True" />
-                <Node name="FrameworkReferences" expanded="True" />
-              </Node>
+            <Node name="BasicEventTest" expanded="True">
               <Node name="Program.cs" selected="True" />
             </Node>
-            <Node name="RemoteTest" expanded="True" />
+            <Node name="BasicParameters" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="AssemblyDependencies" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="NetworkEventSender" expanded="True" />
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.NetworkTest PreferredExecutionTarget="MonoDevelop.Default" />
-  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.BasicEventTest PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.NetworkEventSender PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
   <MonoDevelop.Ide.ItemProperties.RemoteTest PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints />
+  <MultiItemStartupConfigurations />
 </Properties>

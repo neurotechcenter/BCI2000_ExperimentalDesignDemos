@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "rFi6qL0pYuaR/40Z+Ms1PBY2avhmblMBrXmmOWc1aD6zPKE/twbh3ccM/dSVOTYGF9fIROAYl0c3MR/IUiBfQA==",
   "success": true,
   "projectFilePath": "D:\\Users\\swift\\Documents\\GitHub\\BCI2000_ExperimentalDesignDemos\\Csharp_Telnet_BCI2000RemoteNET\\BasicSignalTest\\BasicSignalTest.csproj",
+=======
+  "dgSpecHash": "RuRAWc6WGtw=",
+  "success": true,
+  "projectFilePath": "/Users/jamesswift/Documents/git/BCI2000_ExperimentalDesignDemos/Csharp_Telnet_BCI2000RemoteNET/BasicSignalTest/BasicSignalTest.csproj",
+>>>>>>> 6cd8fda5fc89e87428191f4287ad6fae25c863ea
   "expectedPackageFiles": [],
   "logs": []
 }

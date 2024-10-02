@@ -21,11 +21,11 @@ if not(libisloaded('bci'))
 end
 libfunctions('bci')
 
-%%
+%% Set operator path
 bciHandle = calllib('bci', 'BCI2000Remote_New');
 calllib('bci', 'BCI2000Remote_SetOperatorPath', bciHandle, fullfile(BCI2000root,'prog','Operator'));
 
-% if we fail to establish a connection to BCI2000Remote
+% if we fail cto establish a connection to BCI2000Remote
 if calllib('bci', 'BCI2000Remote_Connect', bciHandle) ~= 1
     fprintf('bci connect fail!')
     calllib('bci', 'BCI2000Remote_Delete', bciHandle); % call BCI2000Remote_Delete to recovery the memory
@@ -51,7 +51,7 @@ calllib('bci', 'BCI2000Remote_Execute', bciHandle,'Startup system localhost', 0)
 calllib('bci', 'BCI2000Remote_SetWindowVisible', bciHandle, 1);
 
 % Set log level to 0
-calllib('bci', 'BCI2000Remote_Execute', bciHandle, 'Set LogLevel 0', 0);
+% calllib('bci', 'BCI2000Remote_Execute', bciHandle, 'Set LogLevel 0', 0);
 
 %% Establish connection to three modules
 SourceModule = 'SignalGenerator';
