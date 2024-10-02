@@ -46,14 +46,16 @@ public class SphereBehavior : MonoBehaviour
         bci.OnIdle(bci =>
         {
             // BCI2000 add events
-            bci.AddEvent("PositionX", 32); // eventName, bitWidth
+            // eventName, bitWidth
+            bci.AddEvent("PositionX", 32);
             bci.AddEvent("PositionY", 32);
         });
 
         bci.OnConnected(bci =>
         {
             // BCI2000 add event watches
-            bci.Visualize("MousePosX"); // eventName
+            // eventName
+            bci.Visualize("MousePosX");
             bci.Visualize("PositionX");
             bci.Visualize("MousePosY");
             bci.Visualize("PositionY");
@@ -93,7 +95,8 @@ public class SphereBehavior : MonoBehaviour
         transform.position = new Vector3(Mpxc, Mpyc, 0.63f);
 
         // BCI2000 set position events here
-        bci.Control.SetEvent("PositionX", (uint)((transform.position.x + 10) * 1000)); // eventName, eventValue (must be uint)
+        // eventName, eventValue (must be uint)
+        bci.Control.SetEvent("PositionX", (uint)((transform.position.x + 10) * 1000));
         bci.Control.SetEvent("PositionY", (uint)( transform.position.y       * 1000));
 
         var x = transform.position.x;

@@ -41,8 +41,9 @@ public class TargetControl : MonoBehaviour
             bci.AddEvent("t3hit", 1);
             bci.AddEvent("t4hit", 1);
 
-            // BCI2000 create new parameter
-            bci.AddParameter("Visualize:Timing", "ExampleParam", "4"); // Tab:Field, ParamName, ParamValue            
+          // BCI2000 create new parameter
+          // Tab:Field, ParamName, ParamValue 
+          bci.AddParameter("Visualize:Timing", "ExampleParam", "4");            
         });
 
         bci.OnConnected(bci =>
@@ -54,12 +55,14 @@ public class TargetControl : MonoBehaviour
             bci.Visualize("t4hit");
 
             // BCI2000 set parameter
-            //bci.SetParameter("SubjectName",     "UnitySubject"); // paramName, paramValue
-            //bci.SetParameter("SamplingRate",    "200");         // paramName, paramValue
-            //bci.SetParameter("SampleBlockSize", "10");         // paramName, paramValue
+            // paramName, paramValue
+            bci.SetParameter("SubjectName",     "UnitySubject"); 
+            bci.SetParameter("SamplingRate",    "200");         
+            bci.SetParameter("SampleBlockSize", "10");
 
             // BCI2000 get parameter
-            BCI2000SamplingRate = bci.GetParameter("SamplingRate"); // paramName
+            // paramName
+            BCI2000SamplingRate = bci.GetParameter("SamplingRate"); 
             Debug.Log("BCI2000 Sampling Rate: " + BCI2000SamplingRate);
         });
 
@@ -78,13 +81,6 @@ public class TargetControl : MonoBehaviour
         t3.SetActive(false);
         t4.SetActive(false);
 
-        bci.OnConnected(bci => 
-        {
-            // Execute can be used for any operator scripting command
-            // BCI2000 change log level to avoid continuously 
-            // printing event changes to operator log
-            bci.connection.Execute("set variable LogLevel 0");
-        });
     }
 
     // Update is called once per frame
@@ -125,7 +121,8 @@ public class TargetControl : MonoBehaviour
             if (t1.activeSelf && targetCol[0])
             {
                 // BCI2000 Set t1 event
-                bci.Control.SetEvent("t1hit", 1); // eventName, eventValue (must be uint)
+                // eventName, eventValue (must be uint)
+                bci.Control.SetEvent("t1hit", 1); 
                 t1.SetActive(false);
                 targetActive = false;
             } else if (t2.activeSelf && targetCol[1])

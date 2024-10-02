@@ -1,5 +1,6 @@
 using BCI2000RemoteNET;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -109,7 +110,31 @@ public class UnityBCI2000 : MonoBehaviour {
     }
 
 
+    ///<summary>
+    ///Waits for BCI2000 to be in the specified state. Similar to <c>BCI2000Remote.WaitForSystemState</c>, but is a non-blocking Unity coroutine.
+    ///</summary>
+    ///<param name="state">The <c>BCI2000Remote.SystemState</c> to wait for </param>
+    public IEnumerator PollSystemState(BCI2000Remote.SystemState state) {
+	while (Control.GetSystemState() != state) {
+	    yield return null;
+	}
+    }
 
+    private uint lastSrcTime = uint.MaxValue;
+    private float lastBlockTime = -1;
+    private float sampleTime = 0;
+    ///<summary>
+    ///Gets the offset into the current block such that the sample was taken exactly one block length ago, for use with GetSignal or GetEvent. This is a bit of a workaround because of how BCI2000 processes data in discrete blocks. Therefore this method must be used carefully. It sends multiple commands to the operator and thus should only be used in a low latency environment, that is, when running on the same machine as the operator. If used, it should be called continuously within an Update() method.
+    ///</summary>
+    public int CurrentSampleOffset() {
+	uint srcTime = control.GetState("SourceTime");
+	if (srcTime != lastSrcTime) {
+	    lastSrcTime = srcTime;
+	    lastBlockTime = Time.time;
+	    sampleTime = 1 / float.Parse(control.GetParameter("SamplingRate"));
+	}
+	return (int) Math.Floor((Time.time - lastBlockTime) / sampleTime);
+    }
 
 
     public string Module1 = "SignalGenerator";
@@ -146,9 +171,6 @@ public class UnityBCI2000 : MonoBehaviour {
 	    control.connection.StartOperator(OperatorPath, OperatorAddress, OperatorPort);
 	}
 	control.connection.Connect(OperatorAddress, OperatorPort);
-	foreach(string file in ParameterFiles) {
-	    control.LoadParameters(file);
-	}
     }
 
     void Start() {
@@ -159,6 +181,9 @@ public class UnityBCI2000 : MonoBehaviour {
 	if (StartModules) {
 	    StartupModules();
 	    control.WaitForSystemState(BCI2000Remote.SystemState.Connected);
+	}
+	foreach(string file in ParameterFiles) {
+	    control.LoadParameters(file);
 	}
 	foreach(Action<BCI2000Remote> action in onConnected) {
 	    action(control);
