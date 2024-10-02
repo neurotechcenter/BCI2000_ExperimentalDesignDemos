@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Users\\swift\\Documents\\GitHub\\ExperimentalDesignDemos\\Csharp_Telnet_BCI2000RemoteNET\\",
+  "WorkspaceRootPath": "D:\\Users\\swift\\Documents\\GitHub\\BCI2000_ExperimentalDesignDemos\\Csharp_Telnet_BCI2000RemoteNET\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8D6F64D8-B124-4EFA-BB80-47344E1B46D8}|BasicEventTest\\BasicEventTest.csproj|d:\\users\\swift\\documents\\github\\experimentaldesigndemos\\csharp_telnet_bci2000remotenet\\basiceventtest\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8D6F64D8-B124-4EFA-BB80-47344E1B46D8}|BasicEventTest\\BasicEventTest.csproj|d:\\users\\swift\\documents\\github\\bci2000_experimentaldesigndemos\\csharp_telnet_bci2000remotenet\\basiceventtest\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8D6F64D8-B124-4EFA-BB80-47344E1B46D8}|BasicEventTest\\BasicEventTest.csproj|solutionrelative:basiceventtest\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D3DB8733-CF75-4B35-833C-C30AD86638B8}|BasicParameters\\BasicParameters.csproj|d:\\users\\swift\\documents\\github\\experimentaldesigndemos\\csharp_telnet_bci2000remotenet\\basicparameters\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D3DB8733-CF75-4B35-833C-C30AD86638B8}|BasicParameters\\BasicParameters.csproj|d:\\users\\swift\\documents\\github\\bci2000_experimentaldesigndemos\\csharp_telnet_bci2000remotenet\\basicparameters\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D3DB8733-CF75-4B35-833C-C30AD86638B8}|BasicParameters\\BasicParameters.csproj|solutionrelative:basicparameters\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -27,24 +27,23 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Users\\swift\\Documents\\GitHub\\ExperimentalDesignDemos\\Csharp_Telnet_BCI2000RemoteNET\\BasicParameters\\Program.cs",
+              "DocumentMoniker": "D:\\Users\\swift\\Documents\\GitHub\\BCI2000_ExperimentalDesignDemos\\Csharp_Telnet_BCI2000RemoteNET\\BasicParameters\\Program.cs",
               "RelativeDocumentMoniker": "BasicParameters\\Program.cs",
-              "ToolTip": "D:\\Users\\swift\\Documents\\GitHub\\ExperimentalDesignDemos\\Csharp_Telnet_BCI2000RemoteNET\\BasicParameters\\Program.cs",
+              "ToolTip": "D:\\Users\\swift\\Documents\\GitHub\\BCI2000_ExperimentalDesignDemos\\Csharp_Telnet_BCI2000RemoteNET\\BasicParameters\\Program.cs",
               "RelativeToolTip": "BasicParameters\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-25T00:20:18.507Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-25T00:20:18.507Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Users\\swift\\Documents\\GitHub\\ExperimentalDesignDemos\\Csharp_Telnet_BCI2000RemoteNET\\BasicEventTest\\Program.cs",
+              "DocumentMoniker": "D:\\Users\\swift\\Documents\\GitHub\\BCI2000_ExperimentalDesignDemos\\Csharp_Telnet_BCI2000RemoteNET\\BasicEventTest\\Program.cs",
               "RelativeDocumentMoniker": "BasicEventTest\\Program.cs",
-              "ToolTip": "D:\\Users\\swift\\Documents\\GitHub\\ExperimentalDesignDemos\\Csharp_Telnet_BCI2000RemoteNET\\BasicEventTest\\Program.cs",
+              "ToolTip": "D:\\Users\\swift\\Documents\\GitHub\\BCI2000_ExperimentalDesignDemos\\Csharp_Telnet_BCI2000RemoteNET\\BasicEventTest\\Program.cs",
               "RelativeToolTip": "BasicEventTest\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-25T00:17:10.83Z",
               "EditorCaption": ""
@@ -59,8 +58,7 @@
               "RelativeToolTip": "..\\..\\BCI2000RemoteNET\\BCI2000Connection.cs",
               "ViewState": "AQIAAIQAAAAAAAAAAAAewKgAAAACAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-25T00:18:12.167Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-25T00:18:12.167Z"
             }
           ]
         }

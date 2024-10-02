@@ -34,7 +34,7 @@ add event test_event 32 0
 
 Startup system localhost
 
-Start Telnet 10.0.0.100:3999 --StartupIdle
+Start Telnet 192.168.42.128:3999 --StartupIdle
 
 Start executable SignalGenerator       --local --LogKeyboard=1 --LogMouse=1
 Start executable DummySignalProcessing --local 
