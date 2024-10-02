@@ -86,7 +86,9 @@ for i in range(10):
     if len(event.getKeys())>0:
         print(len(event.getKeys()))
         bci.Execute('SET STATE Running 0') 
-        break
+        mywin.close()
+        core.quit()
+        sys.exit(0)
     
     event.clearEvents()
     

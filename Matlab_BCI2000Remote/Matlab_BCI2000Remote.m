@@ -1,4 +1,4 @@
-%% BCI2000 Integration 
+%% BCI2000 Integration
 clear all;
 
 %% Setup path and subject name
@@ -12,12 +12,13 @@ BCI2000root  = userinput{1};
 subject_name = 'matlabsub';
 
 passSourceTime = 0.0;
+passSquare     = 0.0;
 
 %% Load BCI2000Remote libraries
 if not(libisloaded('bci'))
     loadlibrary(fullfile(BCI2000root,'prog','BCI2000RemoteLib64'),...
         fullfile(BCI2000root,'src','core','Operator','BCI2000Remote','BCI2000RemoteLib.h'), 'alias', 'bci')
-end 
+end
 libfunctions('bci')
 
 %%
@@ -37,10 +38,10 @@ calllib('bci', 'BCI2000Remote_Execute', bciHandle,'Show window; Set title ${Extr
 calllib('bci', 'BCI2000Remote_Execute', bciHandle,'Reset system', 0);
 
 % Create new parameter (must be done before startup)
-calllib('bci', 'BCI2000Remote_Execute', bciHandle, 'Add Parameter Application:TestParameterField string TestParameter= FirstNewParameter % % %', 0); 
+calllib('bci', 'BCI2000Remote_Execute', bciHandle, 'Add Parameter Application:TestParameterField string TestParameter= FirstNewParameter % % %', 0);
 
-% Define S tates
-% Define new state with 2 bytes of information (2 colors)
+% Define Events
+% Define new event with 2 bytes of information (2 colors)
 calllib('bci', 'BCI2000Remote_Execute', bciHandle, 'add event Square 1 0', 0);
 
 % Startup system localhost
@@ -69,6 +70,8 @@ calllib('bci', 'BCI2000Remote_LoadParametersRemote', bciHandle, fullfile(BCI2000
 calllib('bci', 'BCI2000Remote_SetDataDirectory', bciHandle, fullfile(BCI2000root,'data','BJH'));
 calllib('bci', 'BCI2000Remote_SetSubjectID',     bciHandle, subject_name);
 
+calllib('bci', 'BCI2000Remote_Execute', bciHandle, 'Set parameter SamplingRate 1234Hz', 0);
+
 % Get parameter value
 SamplingRate = calllib('bci', 'BCI2000Remote_GetParameter', bciHandle, 'SamplingRate');
 fprintf(['\nSamplingRate: ' num2str(SamplingRate) 'Hz\n'])
@@ -81,8 +84,8 @@ calllib('bci', 'BCI2000Remote_Execute', bciHandle, 'visualize watch Square',    
 calllib('bci', 'BCI2000Remote_Execute', bciHandle, 'visualize watch SourceTime', 0);
 
 % Get state value
-% Immediately after data block has been acquired from hardware, the 
-% DataIOFilter writes a 16-bit millisecond-resolution time stamp into the 
+% Immediately after data block has been acquired from hardware, the
+% DataIOFilter writes a 16-bit millisecond-resolution time stamp into the
 % SourceTime state. Block duration is measured as the difference between
 % two consecutive time stamps.
 [~,~,~,SourceTime]=calllib('bci', 'BCI2000Remote_GetStateVariable', bciHandle, 'SourceTime', passSourceTime);
@@ -101,20 +104,21 @@ Screen('Preference', 'SkipSyncTests', 2); % skip psychtoolbox screen calibration
 % Define black, white, and grey
 black = 1;
 white = WhiteIndex(screenNumber);
-grey  = white / 2;  
+grey  = white / 2;
 
 % Open an on screen window
-% [window, windowRect] = PsychImaging('OpenWindow', screenNumber, grey); 
+% [window, windowRect] = PsychImaging('OpenWindow', screenNumber, grey);
 [window, windowRect] = PsychImaging('OpenWindow', screenNumber, grey, [0 0 600 600]); % [left, top, right, bottom]
 
 
 % Alternate a black and white square three times
 for i = 1:10
     % Hold any key to quit
-    KeyPressed = KbCheck;
-    if KeyPressed
+    [KeyPressed,~,KeyCode] = KbCheck;
+    KeyName = KbName(KeyCode);
+    if strcmp(KeyName,'ESCAPE') || strcmp(KeyName,'esc')
         sca; % screen close all
-
+        
         % Stop running BCI2000
         calllib('bci', 'BCI2000Remote_SetStateVariable', bciHandle, 'Running', 0);
         
@@ -127,31 +131,36 @@ for i = 1:10
     
     % BCI2000 set white rectangle to 1 (true)
     calllib('bci', 'BCI2000Remote_Execute', bciHandle, 'Set event Square 1', 0);
-
+    
+    [~,~,~,Square] = calllib('bci', 'BCI2000Remote_GetEventVariable', bciHandle, 'Square', passSquare);
+    fprintf(['\nSquare Value: ', num2str(Square), '\n'])
+    
     WaitSecs(1);
-
+    
     Screen('FillRect', window, black, [windowRect(3)/4 windowRect(4)/4 3*windowRect(3)/4 3*windowRect(4)/4]);
     Screen('Flip', window); % flip front and back display surfaces
     
     % BCI2000 set white rectangle to 0 (false)
     calllib('bci', 'BCI2000Remote_Execute', bciHandle, 'Set event Square 0', 0);
-
+    
+    [~,~,~,Square] = calllib('bci', 'BCI2000Remote_GetEventVariable', bciHandle, 'Square', passSquare);
+    fprintf(['\nSquare Value: ', num2str(Square), '\n'])
+    
     WaitSecs(1);
     
-%     % Get state value
+    % Get state value
     [~,~,~,SourceTime] = calllib('bci', 'BCI2000Remote_GetStateVariable', bciHandle, 'SourceTime', passSourceTime);
     fprintf(['\nSourceTime: ', num2str(SourceTime), '\n'])
 end
 
 KbWait; % wait for key press
 sca;    % screen close all
- 
+
 % Stop running BCI2000
 calllib('bci', 'BCI2000Remote_SetStateVariable', bciHandle, 'Running', 0);
 
 
 
 
-    
-    
-    
+
+
