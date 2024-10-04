@@ -1,5 +1,67 @@
-.vs/*
-.vs
-.DS_Store
+#.vs/*
+#.vs
+#.DS_Store
 [bB]in/
-[oO]bj/
+#[oO]bj/
+
+
+# Unity generated files
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+
+# Avoid uploading auto-generated VS/JetBrains Rider project files
+# Use the proper .sln file for your IDE and configurations
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+
+# Unity's script compilation caches
+*.pidb.meta
+*.pdb
+*.mdb
+
+# Builds
+*.apk
+*.aab
+*.unitypackage
+
+# Audio and visual caches
+*.tga
+*.psd
+*.png
+*.fbx
+*.mat
+*.cubemap
+*.prefab
+
+# Other temporary files
+*.tmp
+*.temp
+*.bak
+*.old
+*.log
+*.log*
+*.meta
+
+# Unity Editor settings
+.vscode/
+.vs/
+.idea/
+.DS_Store
+.gradle/
+# Rider project files
+.idea/**
+
+# Crash reports
+sysinfo.txt
