@@ -9,10 +9,12 @@
 [Ll]ibrary/
 [Tt]emp/
 [Oo]bj/
+**/[oO]bj/
 [Bb]uild/
 [Bb]uilds/
 [Ll]ogs/
 [Mm]emoryCaptures/
+SourceTrail/
 
 # Avoid uploading auto-generated VS/JetBrains Rider project files
 # Use the proper .sln file for your IDE and configurations
@@ -62,6 +64,7 @@
 .gradle/
 # Rider project files
 .idea/**
+**/UserSettings/*
 
 # Crash reports
 sysinfo.txt
