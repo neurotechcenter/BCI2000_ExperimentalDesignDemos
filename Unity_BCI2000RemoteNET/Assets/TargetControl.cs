@@ -118,7 +118,8 @@ public class TargetControl : MonoBehaviour
             if (t1.activeSelf && targetCol[0])
             {
                 // BCI2000 Set t1 event
-                bci.Control.SetEvent("t1hit", 1); // eventName, eventValue (must be uint)
+                // eventName, eventValue (must be uint)
+                bci.Control.SetEvent("t1hit", 1); 
 
                 // Can be used to write strings to the Notes event
                 //bci.Control.connection.Execute("PUT NOTE t1hit");
