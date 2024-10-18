@@ -2,5 +2,6 @@
 *.asv
 [Ll]ibrary/
 [Ll]ogs/
+[Uu]ser[Ss]ettings/
 log.txt
 remoteLog.txt
