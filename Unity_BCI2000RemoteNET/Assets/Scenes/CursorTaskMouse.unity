@@ -630,11 +630,7 @@ MonoBehaviour:
   StopWithScene: 1
   ShutdownWithScene: 1
   ParameterFiles:
-<<<<<<< HEAD:Unity_BCI2000RemoteNET/Assets/Scenes/CursorTask.unity
   - C:\bci2000.x64\parms\examples\CursorTask_Unity.prm
-=======
-  - C:\bci2000.x64_dev\parms\examples\CursorTask_Unity.prm
->>>>>>> 2255e101f6baf7f3c98d66595bdce5804acad365:Unity_BCI2000RemoteNET/Assets/Scenes/CursorTaskMouse.unity
   Module1: SignalGenerator
   Module1Args:
   - LogMouse=1
