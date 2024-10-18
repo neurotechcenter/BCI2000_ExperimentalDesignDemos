@@ -1,0 +1,8 @@
+.DS_Store
+*.asv
+*.meta
+[Ll]ibrary/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+log.txt
+remoteLog.txt
