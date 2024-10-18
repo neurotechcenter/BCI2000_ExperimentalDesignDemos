@@ -35,16 +35,20 @@ public class TargetControl : MonoBehaviour
         //SET BCI2000 REFERENCE
         bci = GameObject.Find("BCI2000").GetComponent<UnityBCI2000>();
 
-        bci.OnIdle(bci =>
+    bci.OnIdle(bci =>
         {
             bci.AddEvent("t1hit", 1); // eventName, bitWidth
             bci.AddEvent("t2hit", 1);
             bci.AddEvent("t3hit", 1);
             bci.AddEvent("t4hit", 1);
 
-          // BCI2000 create new parameter
-          // Tab:Field, ParamName, ParamValue 
-          bci.AddParameter("Visualize:Timing", "ExampleParam", "4");            
+            // Execute generic commands inside of a lambda
+            bci.connection.Execute("Add parameter Storage:UserComment string UserCommentInsideLambda= string string % %");
+            bci.connection.Execute("Set parameter UserCommentInsideLambda We%20changed%20a%20comment!");
+
+            // BCI2000 create new parameter
+            // Tab:Field, ParamName, ParamValue 
+            bci.AddParameter("Visualize:Timing", "ExampleParam", "4");            
         });
 
         bci.OnConnected(bci =>
@@ -162,7 +166,10 @@ public class TargetControl : MonoBehaviour
             bci.Control.SetEvent("t4hit", 0);
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape))
+    // Execute generic commands inside of a lambda
+    //bci.Control.connection.Execute("Set event t1hit 1");
+
+    if (Input.GetKeyDown(KeyCode.Escape))
             UnityEngine.Application.Quit();
     }
 }
