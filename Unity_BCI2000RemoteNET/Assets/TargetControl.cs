@@ -166,8 +166,8 @@ public class TargetControl : MonoBehaviour
             bci.Control.SetEvent("t4hit", 0);
         }
 
-    // Execute generic commands inside of a lambda
-    //bci.Control.connection.Execute("Set event t1hit 1");
+    // Execute generic commands outside of a lambda
+    bci.Control.connection.Execute("Set event t1hit 1");
 
     if (Input.GetKeyDown(KeyCode.Escape))
             UnityEngine.Application.Quit();
