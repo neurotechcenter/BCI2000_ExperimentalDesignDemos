@@ -92,6 +92,9 @@ for i in range(10):
     
     event.clearEvents()
     
+    ST = bci.GetStateVariable('SourceTime').value
+    print(ST)
+    
     # make screen white
     rect.fillColor="white"
     rect.draw()
@@ -99,6 +102,8 @@ for i in range(10):
     
     # Set bci2000 event to 1
     bci.Execute('Set event Square 1')
+    Square = bci.GetEventVariable('Square').value
+    print(Square)
     
     ## Hold for 1 s
     core.wait(1)
@@ -110,6 +115,8 @@ for i in range(10):
     
     # set bci2000 event to 0
     bci.Execute('Set event Square 0')
+    Square = bci.GetEventVariable('Square').value
+    print(Square)
     
     ## Hold for 1 s
     core.wait(1)
