@@ -737,7 +737,7 @@ MonoBehaviour:
   StopWithScene: 1
   ShutdownWithScene: 1
   ParameterFiles:
-  - C:\bci2000.x64_dev\parms\examples\CursorTask_Unity.prm
+  - C:\bci2000.x64\parms\examples\CursorTask_Unity.prm
   Module1: SignalGenerator
   Module1Args:
   - LogMouse=1

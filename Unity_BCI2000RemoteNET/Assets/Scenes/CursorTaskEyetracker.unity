@@ -539,7 +539,8 @@ MonoBehaviour:
   StartWithScene: 1
   StopWithScene: 1
   ShutdownWithScene: 1
-  ParameterFiles: []
+  ParameterFiles:
+  - C:\bci2000.x64\parms\examples\CursorTask_Unity.prm
   Module1: SignalGenerator
   Module1Args:
   - LogEyetrackerTobiiPro=1
